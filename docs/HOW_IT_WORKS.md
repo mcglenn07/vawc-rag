@@ -2,6 +2,17 @@
 
 A walkthrough of the RA 9262 Assistant, in the order data moves through it. File and function names match the repository. Design reasons live in `DESIGN.md`; this file explains what the code does.
 
+## Reading order
+
+If you are reading the code to learn it, this order follows one question from start to finish:
+
+1. `app.py`: `respond()`, the entry point for every chat message.
+2. `rag.py`: `retrieve()` and `_search_and_pair()` (steps 1 to 5 are marked in comments), then `answer()` and `build_messages()`, then the citation checks at the bottom.
+3. `db.py`: `search()`, the single SQL query that does the retrieval.
+4. `providers.py`: `embed()` and `chat_stream()`, the only places that call OpenAI.
+5. Then the build side: `chunk.py` (`split_lines()`, `make_chunks()`) and `embed.py`.
+6. Last, `eval/metrics.py` and `eval/run_eval.py` to see how all of this is measured.
+
 ## 1. The big picture
 
 There are two phases.

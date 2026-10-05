@@ -20,8 +20,11 @@ load_dotenv()
 # Untyped `vector` column (no fixed dimension) so runs with different embedding models
 # can live side by side. Fine without an index: ~130 rows per run is an exact scan.
 SCHEMA = """
+-- pgvector adds a `vector` column type and distance operators to plain Postgres.
 create extension if not exists vector;
 
+-- One row per embedding run (a chunk setting + embedding model). Lets several setups
+-- live side by side; the app serves the one named by ACTIVE_RUN_ID.
 create table if not exists runs (
     run_id      text primary key,
     created_at  timestamptz not null default now(),
@@ -44,7 +47,7 @@ create table if not exists chunks (
     pdf_pages  int[] not null,
     text       text not null,
     embed_text text not null,
-    embedding  vector not null,
+    embedding  vector not null,          -- the chunk's meaning as numbers (3,072 for 3-large)
     primary key (run_id, id, part)
 );
 """
@@ -147,7 +150,13 @@ def delete_run(conn, run_id: str) -> int:
 
 
 def search(conn, vector: list[float], run_id: str, k: int) -> list[dict]:
-    """Top k chunks by cosine distance (smaller = closer)."""
+    """Top k chunks by cosine distance (smaller = closer).
+
+    This one query is the "retrieval" in RAG. `<=>` is pgvector's cosine distance operator:
+    it compares the direction of two vectors, so texts about the same thing score close to 0
+    even if they share few exact words. Postgres computes it for every chunk in the run and
+    sorts; with ~130 rows that exact scan takes milliseconds, so no index is needed.
+    """
     return conn.execute(
         f"select {CHUNK_COLUMNS}, embedding <=> %s as distance from chunks"
         " where run_id = %s order by distance limit %s",

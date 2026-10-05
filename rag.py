@@ -2,6 +2,11 @@
 
 Flow: rewrite_query (follow-ups only) -> retrieve (pgvector, merge parts, attach
 crosswalk pair) -> answer (streamed, grounded in the retrieved sections only).
+
+RAG in one paragraph: the model is not trusted to remember the law. For every question we
+first RETRIEVE the few sections most similar in meaning to the question (vector search), then
+ask the model to answer using only those sections (GENERATION), and finally check its
+citations in code. Retrieval decides what the model can know; the prompt decides how it uses it.
 """
 
 import csv
@@ -14,7 +19,7 @@ import db
 import providers
 
 ROOT = Path(__file__).parent
-TOP_K = 5
+TOP_K = 5  # how many distinct sections the search returns (crosswalk pairs come on top of these)
 REFUSAL = "I cannot find this in RA 9262 or the IRR."
 SOURCES_HEADER = "Retrieved sections"
 
@@ -22,6 +27,8 @@ SOURCES_HEADER = "Retrieved sections"
 # Set and verified by the owner (911 is the Philippine national emergency hotline), not by the model.
 EMERGENCY_CONTACT_TEXT = "If you are in immediate danger, call 911 now."
 
+# Used only for follow-ups. "How long does it last?" has no meaning on its own, so its
+# embedding would match random sections; the rewrite turns it into a searchable query.
 REWRITE_PROMPT = """You turn the user's latest message into one short search query over \
 the text of a Philippine law on violence against women and children and its implementing rules.
 - Focus on what the latest message asks. Use the earlier conversation only to resolve references \
@@ -31,6 +38,8 @@ such as "it", "this" or "that order"; drop earlier topics the latest message doe
 - Do not add the law's name or number, do not answer, and do not add facts.
 Output only the query, on one line."""
 
+# The instructions that make this a *grounded* assistant. The retrieved sections are appended
+# below these rules at question time (see build_messages), so the model sees rules + evidence.
 SYSTEM_PROMPT = f"""You answer questions about Republic Act No. 9262 (Anti-Violence Against Women \
 and Their Children Act of 2004) and its 2004 Implementing Rules and Regulations (IRR), using only \
 the numbered sources below.
@@ -59,6 +68,7 @@ line in rule 8.
 "{EMERGENCY_CONTACT_TEXT}" Then answer. This is the only contact detail you may give.
 9. Be plain and brief. This is legal information, not legal advice."""
 
+# Module-level caches: loaded once per process, then reused for every question.
 _crosswalk: dict[str, list[str]] | None = None
 _checked_run: str | None = None
 
@@ -146,14 +156,25 @@ def retrieve(question: str, history: list[dict] | None = None, k: int = TOP_K,
     With pair=True, crosswalk partners of the top k are attached after them (outside k).
     """
     run_id = run_id or active_run_id()
+
+    # Step 1: decide what to search. Always the question as typed; for follow-ups, also an
+    # LLM-rewritten standalone version. Searching both is a safety net if the rewrite is off.
     queries = [question]
     if rewritten := rewrite_query(question, history):
         queries.append(rewritten)
+
+    # Step 2: turn each query into a vector (3,072 numbers that encode its meaning). It must be
+    # the same embedding model the run's chunks were stored with, or distances are meaningless.
     vectors = providers.embed(queries, model=run_embed_model(run_id))
+
+    # Steps 3-5 (search, merge, pair) need the database; with_retry reconnects if it dropped.
     return db.with_retry(lambda conn: _search_and_pair(conn, vectors, run_id, k, pair))
 
 
 def _search_and_pair(conn, vectors: list[list[float]], run_id: str, k: int, pair: bool) -> list[dict]:
+    # Step 3: vector search. Each row is one chunk (a section or a part of a long section) with
+    # its cosine distance to the query: 0 = same meaning, larger = less related.
+    # `best` keeps one entry per chunk, with the smaller distance if both queries found it.
     best: dict[tuple[str, int], dict] = {}
     for vector in vectors:
         # Fetch extra chunks so k distinct sections survive the merge of parts.
@@ -162,6 +183,9 @@ def _search_and_pair(conn, vectors: list[list[float]], run_id: str, k: int, pair
             if key not in best or row["distance"] < best[key]["distance"]:
                 best[key] = row
 
+    # Step 4: merge parts into sections. Results are counted per section, not per chunk, so
+    # one long section split into 5 parts cannot crowd out 4 other sections. Sorting first means
+    # a section's rank is set by its closest part, and dicts keep insertion order.
     sections: dict[str, dict] = {}
     for row in sorted(best.values(), key=lambda r: r["distance"]):
         s = sections.setdefault(row["citation"], {**row, "rows": [], "source": "search"})
@@ -171,6 +195,9 @@ def _search_and_pair(conn, vectors: list[list[float]], run_id: str, k: int, pair
         # Only the matched parts go to the model; a long section's other parts stay out.
         s["text"] = "\n".join(r["text"] for r in sorted(s.pop("rows"), key=lambda r: r["part"]))
 
+    # Step 5: law/IRR pairing. If the search found RA 9262 Section 9, also send IRR Section 12
+    # (its implementing rule), and the reverse, using the hand-verified crosswalk. These are
+    # fetched whole and added after the top k, so they never push a search result out.
     if pair:
         have = {s["citation"] for s in ranked}
         wanted = [p for s in ranked for p in crosswalk().get(s["citation"], []) if p not in have]
@@ -186,6 +213,8 @@ def _search_and_pair(conn, vectors: list[list[float]], run_id: str, k: int, pair
 
 
 def format_sources(sections: list[dict]) -> str:
+    """The evidence block the model reads. The label in each header is exactly the string the
+    model must copy into its citations, which is what makes the citation check possible."""
     blocks = []
     for n, s in enumerate(sections, start=1):
         title = s["citation"] + (f": {s['heading']}" if s["heading"] else "")
@@ -194,6 +223,9 @@ def format_sources(sections: list[dict]) -> str:
 
 
 def build_messages(question: str, history: list[dict] | None, sections: list[dict]) -> list[dict]:
+    # Chat models take a list of messages: system (rules + sources), the last few turns for
+    # context, then the new question. The sources go in the system message so the model treats
+    # them as the reference material rather than as something the user said.
     system = f"{SYSTEM_PROMPT}\n\nSources:\n\n{format_sources(sections)}"
     return [{"role": "system", "content": system}, *clean_history(history), {"role": "user", "content": question}]
 
@@ -206,10 +238,14 @@ def answer(question: str, history: list[dict] | None = None,
     cleaning single deltas would miss citations split across them.
     """
     sections = retrieve(question, history, run_id=run_id)
+    # Streaming returns the answer in small pieces as it is generated, so the user sees text
+    # within about a second instead of waiting for the whole reply.
     return sections, providers.chat_stream(build_messages(question, history, sections))
 
 
-CITATION = re.compile(r"\[[^\]]*\]")
+# --- Citation checks: the prompt asks for clean citations, these functions make sure of it. ---
+
+CITATION = re.compile(r"\[[^\]]*\]")  # anything in square brackets, e.g. "[RA 9262, Section 5]"
 PLURAL = re.compile(r"^(.*?)Sections\s+(.+)$")
 
 

@@ -50,11 +50,14 @@ def respond(message: str, history: list[dict], request: gr.Request):
         yield "The question limit for this demo has been reached. Please try again later."
         return
     yield "_Searching RA 9262 and the IRR..._"
+    # Gradio shows whatever this generator yields last, so each yield replaces the message.
     sections, stream = rag.answer(message, history)
     text = ""
     for delta in stream:
         text += delta
         yield rag.clean_citations(text)
+    # After the full answer arrives: drop citations to sections the search never returned
+    # (the model citing something it was not shown), then append the sources list.
     text, removed = rag.drop_unretrieved_citations(rag.clean_citations(text), sections)
     note = ""
     if removed:

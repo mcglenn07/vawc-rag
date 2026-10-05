@@ -29,6 +29,8 @@ def make_run_id(settings: dict) -> str:
 def embed_chunks(chunks_path: Path, note: str | None = None) -> str:
     data = json.loads(chunks_path.read_text(encoding="utf-8"))
     chunks, settings = data["chunks"], data["settings"]
+    # The expensive, one-time half of RAG: every chunk becomes a vector and is stored.
+    # Questions are embedded later, one at a time, and compared against these.
     vectors = providers.embed([c["embed_text"] for c in chunks])
     run_id = make_run_id(settings)
     with db.connect() as conn:

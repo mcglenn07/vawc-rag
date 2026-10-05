@@ -30,6 +30,8 @@ def client() -> OpenAI:
 
 
 def embed(texts: list[str], model: str = EMBED_MODEL) -> list[list[float]]:
+    """Text -> vectors. Same model in, comparable vectors out: chunks are embedded once by
+    embed.py, questions every time someone asks, and search compares the two."""
     out = []
     for start in range(0, len(texts), 100):  # stay well under the per-request input limit
         response = client().embeddings.create(model=model, input=texts[start : start + 100])

@@ -72,7 +72,13 @@ def can_break_after(line: str) -> bool:
 
 
 def split_lines(lines: list[str], settings: Settings) -> list[list[str]]:
-    """Greedy split at line boundaries. A single line longer than split_words stays whole."""
+    """Greedy split at line boundaries. A single line longer than split_words stays whole.
+
+    Why split at all: an embedding is one vector for the whole chunk. A 2,000-word section that
+    lists duties of 12 agencies gets one "average" meaning, so a question about one agency
+    matches it weakly. Smaller parts give each topic its own vector. Why not split smaller:
+    tiny chunks lose context ("a) Commission on Human Rights" alone means little).
+    """
     words = lambda ls: sum(len(l.split()) for l in ls)
     if words(lines) <= settings.split_words:
         return [lines]
@@ -112,6 +118,9 @@ def make_chunks(settings: Settings) -> list[dict]:
                     "part": n,
                     "parts": len(parts),
                     "text": text,
+                    # What gets embedded. The "RA 9262, Section 14: Barangay Protection Orders"
+                    # prefix tells the vector what the text is about; removing it cost 3 of 45
+                    # questions in the eval.
                     "embed_text": f"{prefix}\n\n{text}" if settings.heading_prefix else text,
                 })
     return chunks
