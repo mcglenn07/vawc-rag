@@ -1,0 +1,1247 @@
+{
+ "run_id": "20261003-102647-sw400-ov0-hp",
+ "embed_model": "text-embedding-3-small",
+ "settings": {
+  "overlap": 0,
+  "split_words": 400,
+  "heading_prefix": true
+ },
+ "questions": {
+  "total": 52,
+  "verified": 0
+ },
+ "retrieval": {
+  "n": 45,
+  "mrr": 0.8180246913580247,
+  "recall@3": 0.8444444444444444,
+  "precision@3": 0.3703703703703703,
+  "ndcg@3": 0.8069446677747235,
+  "hits@3": 38,
+  "recall@5": 0.9111111111111111,
+  "precision@5": 0.23555555555555557,
+  "ndcg@5": 0.8346825771831975,
+  "hits@5": 41,
+  "recall@20": 0.9555555555555556,
+  "precision@20": 0.06111111111111111,
+  "ndcg@20": 0.8492878479114642,
+  "hits@20": 43,
+  "both_found": 12,
+  "both_n": 13,
+  "by_type": {
+   "law_only": {
+    "n": 15,
+    "hits@5": 15,
+    "mrr": 0.8833333333333333
+   },
+   "irr_only": {
+    "n": 12,
+    "hits@5": 12,
+    "mrr": 0.9027777777777778
+   },
+   "both": {
+    "n": 13,
+    "hits@5": 12,
+    "mrr": 0.9230769230769231
+   },
+   "follow_up": {
+    "n": 5,
+    "hits@5": 2,
+    "mrr": 0.14555555555555555
+   }
+  }
+ },
+ "retrieval_records": [
+  {
+   "question": "What is the government's position regarding violence against women and children?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 2"
+   ],
+   "top5": [
+    "RA 9262, Section 2",
+    "RA 9262, Section 32",
+    "RA 9262, Section 5",
+    "IRR, Rule I, Section 3",
+    "IRR, Rule IX, Section 61"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Does this law cover violence by a man the woman is dating or used to date?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 3"
+   ],
+   "top5": [
+    "IRR, Rule II, Section 5",
+    "RA 9262, Section 3",
+    "IRR, Rule III, Section 7",
+    "RA 9262, Section 5",
+    "RA 9262, Section 6"
+   ],
+   "mrr": 0.5,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 0.6309297535714575,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 0.6309297535714575,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 0.6309297535714575
+  },
+  {
+   "question": "How should this law be interpreted when it comes to protecting victims of violence against women and their children?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 4"
+   ],
+   "top5": [
+    "RA 9262, Section 4",
+    "IRR, Rule I, Section 4",
+    "IRR, Rule III, Section 7",
+    "RA 9262, Section 6",
+    "RA 9262, Section 5"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Which court handles cases of violence against women and their children under this law?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 7"
+   ],
+   "top5": [
+    "RA 9262, Section 7",
+    "IRR, Rule III, Section 10",
+    "RA 9262, Section 6",
+    "RA 9262, Section 5",
+    "IRR, Rule V, Section 34"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Where should I file an application for a protection order under this law?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 10"
+   ],
+   "top5": [
+    "RA 9262, Section 11",
+    "IRR, Rule IV, Section 20",
+    "IRR, Rule IV, Section 21",
+    "RA 9262, Section 10",
+    "IRR, Rule IV, Section 15"
+   ],
+   "mrr": 0.25,
+   "recall@3": 0.0,
+   "precision@3": 0.0,
+   "ndcg@3": 0.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 0.43067655807339306,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 0.43067655807339306
+  },
+  {
+   "question": "What information and steps are required to apply for a protection order under this law?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 11"
+   ],
+   "top5": [
+    "RA 9262, Section 11",
+    "IRR, Rule IV, Section 20",
+    "RA 9262, Section 8",
+    "IRR, Rule IV, Section 11",
+    "RA 9262, Section 9"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What happens if a woman or her child applying for a protection order cannot afford to hire a lawyer?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 13"
+   ],
+   "top5": [
+    "RA 9262, Section 13",
+    "IRR, Rule V, Section 37",
+    "RA 9262, Section 38",
+    "RA 9262, Section 11",
+    "IRR, Rule IV, Section 20"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Who can issue a Barangay Protection Order and how long is it effective?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 14"
+   ],
+   "top5": [
+    "RA 9262, Section 14",
+    "RA 9262, Section 8",
+    "IRR, Rule IV, Section 11",
+    "IRR, Rule IV, Section 14",
+    "IRR, Rule IV, Section 16"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What happens if violence covered by this Act is alleged in a legal separation case?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 19"
+   ],
+   "top5": [
+    "IRR, Rule IV, Section 25",
+    "RA 9262, Section 19",
+    "IRR, Rule IV, Section 19",
+    "RA 9262, Section 3",
+    "RA 9262, Section 8"
+   ],
+   "mrr": 0.5,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 0.6309297535714575,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 0.6309297535714575,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 0.6309297535714575
+  },
+  {
+   "question": "What happens if someone violates a Barangay Protection Order (BPO) issued under this law?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 21"
+   ],
+   "top5": [
+    "RA 9262, Section 21",
+    "IRR, Rule IV, Section 16",
+    "RA 9262, Section 14",
+    "IRR, Rule IV, Section 13",
+    "IRR, Rule IV, Section 14"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What are barangay officials and law enforcers required to do when someone asks for help due to violence covered by this law?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 30"
+   ],
+   "top5": [
+    "RA 9262, Section 30",
+    "IRR, Rule VIII, Section 47",
+    "RA 9262, Section 42",
+    "IRR, Rule VIII, Section 48",
+    "RA 9262, Section 32"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What rights do victims of violence against women and their children have under this law?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 35"
+   ],
+   "top5": [
+    "RA 9262, Section 35",
+    "IRR, Rule VI, Section 38",
+    "RA 9262, Section 28",
+    "RA 9262, Section 6",
+    "IRR, Rule V, Section 34"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Which government agencies are part of the council responsible for addressing violence against women and their children?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 39"
+   ],
+   "top5": [
+    "RA 9262, Section 39",
+    "IRR, Rule IX, Section 61",
+    "IRR, Rule IX, Section 52",
+    "IRR, Rule IX, Section 53",
+    "IRR, Rule IX, Section 54"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Can a victim covered by this law take additional paid leave from work, and what happens if their employer prevents them from doing so?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 43"
+   ],
+   "top5": [
+    "RA 9262, Section 43",
+    "IRR, Rule VI, Section 42",
+    "RA 9262, Section 35",
+    "IRR, Rule VI, Section 38",
+    "RA 9262, Section 36"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What laws apply if something is not specifically covered by this Act?",
+   "type": "law_only",
+   "expected": [
+    "RA 9262, Section 47"
+   ],
+   "top5": [
+    "RA 9262, Section 47",
+    "RA 9262, Section 48",
+    "RA 9262, Section 33",
+    "IRR, Rule IV, Section 27",
+    "IRR, Rule XIII, Section 66"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What are these Rules and Regulations intended to provide for women and their children?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule I, Section 2"
+   ],
+   "top5": [
+    "IRR, Rule I, Section 4",
+    "IRR, Rule I, Section 2",
+    "IRR, Rule I, Section 1",
+    "IRR, Rule VI, Section 40",
+    "IRR, Rule III, Section 7"
+   ],
+   "mrr": 0.5,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 0.6309297535714575,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 0.6309297535714575,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 0.6309297535714575
+  },
+  {
+   "question": "Who is responsible for taking protective custody of an abused child?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule IV, Section 31"
+   ],
+   "top5": [
+    "IRR, Rule IV, Section 31",
+    "IRR, Rule V, Section 34",
+    "IRR, Rule IV, Section 12",
+    "RA 9262, Section 28",
+    "RA 9262, Section 31"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Are people allowed to reveal the identity or location of service providers involved in VAWC cases?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule VII, Section 44"
+   ],
+   "top5": [
+    "IRR, Rule VII, Section 44",
+    "RA 9262, Section 44",
+    "IRR, Rule XI, Section 63",
+    "IRR, Rule VII, Section 43",
+    "IRR, Rule VI, Section 38"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What rights must be respected when someone is arrested, investigated, or detained?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule VII, Section 45"
+   ],
+   "top5": [
+    "IRR, Rule VII, Section 45",
+    "IRR, Rule XI, Section 63",
+    "IRR, Rule IV, Section 26",
+    "RA 9262, Section 35",
+    "IRR, Rule VI, Section 38"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What are barangay officials required to do when they receive information about violence against women and their children?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule VIII, Section 47"
+   ],
+   "top5": [
+    "IRR, Rule VIII, Section 47",
+    "RA 9262, Section 30",
+    "RA 9262, Section 32",
+    "IRR, Rule VIII, Section 51",
+    "RA 9262, Section 42"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Who is responsible for submitting an annual report on the implementation of the Act to the President?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule IX, Section 55"
+   ],
+   "top5": [
+    "IRR, Rule IX, Section 55",
+    "RA 9262, Section 46",
+    "IRR, Rule IX, Section 61",
+    "IRR, Rule IX, Section 53",
+    "IRR, Rule VIII, Section 50"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "How often does the Council have to meet and what is required for them to conduct business?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule IX, Section 56"
+   ],
+   "top5": [
+    "IRR, Rule IX, Section 56",
+    "IRR, Rule IX, Section 58",
+    "IRR, Rule IX, Section 57",
+    "IRR, Rule IX, Section 54",
+    "IRR, Rule IX, Section 53"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Can members of the Council or their permanent representatives receive honoraria or emoluments?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule IX, Section 57"
+   ],
+   "top5": [
+    "IRR, Rule IX, Section 57",
+    "IRR, Rule IX, Section 53",
+    "IRR, Rule IX, Section 58",
+    "IRR, Rule IX, Section 56",
+    "IRR, Rule IX, Section 61"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What are some of the responsibilities of the Secretariat to the Council?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule IX, Section 58"
+   ],
+   "top5": [
+    "IRR, Rule IX, Section 58",
+    "IRR, Rule IX, Section 54",
+    "IRR, Rule IX, Section 61",
+    "IRR, Rule IX, Section 53",
+    "RA 9262, Section 39"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "Will there be mechanisms to help implement the law and its rules at local and sub-national levels?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule IX, Section 59"
+   ],
+   "top5": [
+    "IRR, Rule IX, Section 59",
+    "RA 9262, Section 46",
+    "IRR, Rule VIII, Section 51",
+    "IRR, Rule IX, Section 61",
+    "IRR, Rule I, Section 2"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What roles can NGOs play in helping to implement the law against violence against women and their children?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule IX, Section 60"
+   ],
+   "top5": [
+    "IRR, Rule IX, Section 60",
+    "IRR, Rule VIII, Section 51",
+    "RA 9262, Section 32",
+    "IRR, Rule IX, Section 61",
+    "IRR, Rule IX, Section 54"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 1.0
+  },
+  {
+   "question": "What kind of assistance can the Department of Health provide to women and children who are victims of violence?",
+   "type": "irr_only",
+   "expected": [
+    "IRR, Rule IX, Section 61"
+   ],
+   "top5": [
+    "IRR, Rule VI, Section 40",
+    "IRR, Rule VI, Section 39",
+    "IRR, Rule IX, Section 61",
+    "RA 9262, Section 40",
+    "RA 9262, Section 35"
+   ],
+   "mrr": 0.3333333333333333,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 0.5,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 0.5,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 0.5
+  },
+  {
+   "question": "What actions are considered as violence against women and their children under the law?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 5",
+    "IRR, Rule III, Section 7"
+   ],
+   "top5": [
+    "RA 9262, Section 5",
+    "RA 9262, Section 3",
+    "IRR, Rule III, Section 7",
+    "RA 9262, Section 6",
+    "IRR, Rule II, Section 5"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 0.9197207891481876,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 0.9197207891481876,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 0.9197207891481876,
+   "both_found": true
+  },
+  {
+   "question": "What penalties can someone face if found guilty of violence against women and their children under this law?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 6",
+    "IRR, Rule III, Section 8"
+   ],
+   "top5": [
+    "RA 9262, Section 6",
+    "IRR, Rule III, Section 8",
+    "RA 9262, Section 5",
+    "IRR, Rule III, Section 7",
+    "RA 9262, Section 3"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "Who is allowed to file a petition for a protection order in cases of violence against women and their children?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 9",
+    "IRR, Rule IV, Section 12"
+   ],
+   "top5": [
+    "RA 9262, Section 9",
+    "IRR, Rule IV, Section 12",
+    "IRR, Rule V, Section 34",
+    "RA 9262, Section 8",
+    "IRR, Rule IV, Section 20"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "Are protection orders issued under this law valid and enforceable throughout the Philippines?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 12",
+    "IRR, Rule IV, Section 22"
+   ],
+   "top5": [
+    "RA 9262, Section 12",
+    "IRR, Rule IV, Section 22",
+    "RA 9262, Section 8",
+    "RA 9262, Section 33",
+    "RA 9262, Section 22"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "How long does a Temporary Protection Order last and what happens after it is issued?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 15",
+    "IRR, Rule IV, Section 17"
+   ],
+   "top5": [
+    "IRR, Rule IV, Section 17",
+    "RA 9262, Section 15",
+    "IRR, Rule IV, Section 18",
+    "RA 9262, Section 16",
+    "RA 9262, Section 8"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "What happens if the respondent does not show up or does not have a lawyer during the hearing for a Permanent Protection Order?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 16",
+    "IRR, Rule IV, Section 18"
+   ],
+   "top5": [
+    "RA 9262, Section 16",
+    "IRR, Rule IV, Section 18",
+    "IRR, Rule IV, Section 20",
+    "RA 9262, Section 13",
+    "IRR, Rule IV, Section 19"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "What statement must be included on a protection order issued by the Punong Barangay or court?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 17",
+    "IRR, Rule IV, Section 28"
+   ],
+   "top5": [
+    "RA 9262, Section 17",
+    "IRR, Rule IV, Section 28",
+    "RA 9262, Section 8",
+    "RA 9262, Section 33",
+    "RA 9262, Section 14"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "What happens if an official or judge does not act on an application for a protection order within the required time without a valid reason?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 18",
+    "IRR, Rule IV, Section 30"
+   ],
+   "top5": [
+    "IRR, Rule IV, Section 30",
+    "RA 9262, Section 18",
+    "IRR, Rule IV, Section 29",
+    "IRR, Rule IV, Section 20",
+    "RA 9262, Section 20"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "What happens if a person ordered by the court to give a bond to keep the peace under a protection order fails to do so?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 23",
+    "IRR, Rule IV, Section 26"
+   ],
+   "top5": [
+    "IRR, Rule IV, Section 26",
+    "RA 9262, Section 23",
+    "RA 9262, Section 21",
+    "IRR, Rule IV, Section 23",
+    "IRR, Rule IV, Section 16"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "How long do I have to file a criminal case for violence against women and their children?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 24",
+    "IRR, Rule III, Section 9"
+   ],
+   "top5": [
+    "RA 9262, Section 6",
+    "RA 9262, Section 5",
+    "IRR, Rule III, Section 6",
+    "IRR, Rule III, Section 7",
+    "RA 9262, Section 25"
+   ],
+   "mrr": 0.0,
+   "recall@3": 0.0,
+   "precision@3": 0.0,
+   "ndcg@3": 0.0,
+   "recall@5": 0.0,
+   "precision@5": 0.0,
+   "ndcg@5": 0.0,
+   "recall@20": 0.0,
+   "precision@20": 0.0,
+   "ndcg@20": 0.0,
+   "both_found": false
+  },
+  {
+   "question": "Can a woman suffering from battered woman syndrome be held criminally or civilly liable if she commits a crime?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 26",
+    "IRR, Rule V, Section 32"
+   ],
+   "top5": [
+    "RA 9262, Section 26",
+    "IRR, Rule V, Section 32",
+    "IRR, Rule V, Section 34",
+    "RA 9262, Section 28",
+    "IRR, Rule III, Section 6"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "Who gets custody of children if a woman is a victim of violence?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 28",
+    "IRR, Rule V, Section 34"
+   ],
+   "top5": [
+    "IRR, Rule V, Section 34",
+    "RA 9262, Section 28",
+    "IRR, Rule IV, Section 12",
+    "RA 9262, Section 7",
+    "RA 9262, Section 35"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "Will the court quickly issue a hold departure order in cases under this law?",
+   "type": "both",
+   "expected": [
+    "RA 9262, Section 37",
+    "IRR, Rule V, Section 36"
+   ],
+   "top5": [
+    "RA 9262, Section 37",
+    "IRR, Rule V, Section 36",
+    "IRR, Rule IV, Section 30",
+    "IRR, Rule IV, Section 25",
+    "RA 9262, Section 18"
+   ],
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.6666666666666666,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.4,
+   "ndcg@5": 1.0,
+   "recall@20": 1.0,
+   "precision@20": 0.1,
+   "ndcg@20": 1.0,
+   "both_found": true
+  },
+  {
+   "question": "What is the penalty for estafa?",
+   "type": "not_in_docs",
+   "expected": [],
+   "top5": [
+    "IRR, Rule III, Section 8",
+    "RA 9262, Section 6",
+    "RA 9262, Section 17",
+    "RA 9262, Section 12",
+    "IRR, Rule IV, Section 28"
+   ]
+  },
+  {
+   "question": "What are the grounds for annulment of marriage?",
+   "type": "not_in_docs",
+   "expected": [],
+   "top5": [
+    "IRR, Rule IV, Section 19",
+    "RA 9262, Section 8",
+    "IRR, Rule II, Section 5",
+    "IRR, Rule IV, Section 25",
+    "RA 9262, Section 3"
+   ]
+  },
+  {
+   "question": "What is the penalty for cyber libel?",
+   "type": "not_in_docs",
+   "expected": [],
+   "top5": [
+    "IRR, Rule III, Section 8",
+    "RA 9262, Section 44",
+    "IRR, Rule XI, Section 63",
+    "RA 9262, Section 6",
+    "IRR, Rule V, Section 35"
+   ]
+  },
+  {
+   "question": "How many days of maternity leave does a female employee get?",
+   "type": "not_in_docs",
+   "expected": [],
+   "top5": [
+    "IRR, Rule VI, Section 42",
+    "RA 9262, Section 43",
+    "IRR, Rule VI, Section 40",
+    "RA 9262, Section 28",
+    "IRR, Rule V, Section 34"
+   ]
+  },
+  {
+   "question": "How do I register a business name in the Philippines?",
+   "type": "not_in_docs",
+   "expected": [],
+   "top5": [
+    "IRR, Rule IV, Section 15",
+    "IRR, Rule IV, Section 14",
+    "RA 9262, Section 10",
+    "RA 9262, Section 14",
+    "IRR, Rule IV, Section 16"
+   ]
+  },
+  {
+   "question": "What is the minimum wage in Metro Manila?",
+   "type": "not_in_docs",
+   "expected": [],
+   "top5": [
+    "RA 9262, Section 12",
+    "IRR, Rule IV, Section 22",
+    "IRR, Rule VIII, Section 47",
+    "RA 9262, Section 30",
+    "RA 9262, Section 2"
+   ]
+  },
+  {
+   "question": "Can a foreigner own land in the Philippines?",
+   "type": "not_in_docs",
+   "expected": [],
+   "top5": [
+    "IRR, Rule IV, Section 22",
+    "RA 9262, Section 12",
+    "IRR, Rule VII, Section 45",
+    "RA 9262, Section 2",
+    "RA 9262, Section 14"
+   ]
+  },
+  {
+   "question": "How long does it last?",
+   "type": "follow_up",
+   "expected": [
+    "RA 9262, Section 14"
+   ],
+   "top5": [
+    "RA 9262, Section 8",
+    "IRR, Rule IV, Section 11",
+    "IRR, Rule IV, Section 14",
+    "IRR, Rule IV, Section 13",
+    "IRR, Rule VIII, Section 47"
+   ],
+   "mrr": 0.16666666666666666,
+   "recall@3": 0.0,
+   "precision@3": 0.0,
+   "ndcg@3": 0.0,
+   "recall@5": 0.0,
+   "precision@5": 0.0,
+   "ndcg@5": 0.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 0.3562071871080222
+  },
+  {
+   "question": "What is the penalty for it?",
+   "type": "follow_up",
+   "expected": [
+    "RA 9262, Section 6"
+   ],
+   "top5": [
+    "RA 9262, Section 44",
+    "RA 9262, Section 17",
+    "RA 9262, Section 18",
+    "IRR, Rule III, Section 8",
+    "RA 9262, Section 6"
+   ],
+   "mrr": 0.2,
+   "recall@3": 0.0,
+   "precision@3": 0.0,
+   "ndcg@3": 0.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 0.38685280723454163,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 0.38685280723454163
+  },
+  {
+   "question": "How long is it effective?",
+   "type": "follow_up",
+   "expected": [
+    "RA 9262, Section 15"
+   ],
+   "top5": [
+    "IRR, Rule IV, Section 24",
+    "IRR, Rule IV, Section 18",
+    "IRR, Rule IV, Section 17",
+    "RA 9262, Section 15",
+    "RA 9262, Section 8"
+   ],
+   "mrr": 0.25,
+   "recall@3": 0.0,
+   "precision@3": 0.0,
+   "ndcg@3": 0.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 0.43067655807339306,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 0.43067655807339306
+  },
+  {
+   "question": "Where do they file it?",
+   "type": "follow_up",
+   "expected": [
+    "RA 9262, Section 10"
+   ],
+   "top5": [
+    "RA 9262, Section 9",
+    "IRR, Rule IV, Section 21",
+    "IRR, Rule IV, Section 20",
+    "RA 9262, Section 11",
+    "IRR, Rule IV, Section 12"
+   ],
+   "mrr": 0.1111111111111111,
+   "recall@3": 0.0,
+   "precision@3": 0.0,
+   "ndcg@3": 0.0,
+   "recall@5": 0.0,
+   "precision@5": 0.0,
+   "ndcg@5": 0.0,
+   "recall@20": 1.0,
+   "precision@20": 0.05,
+   "ndcg@20": 0.3010299956639812
+  },
+  {
+   "question": "Can my ex-boyfriend be covered by this?",
+   "type": "follow_up",
+   "expected": [
+    "RA 9262, Section 3"
+   ],
+   "top5": [
+    "RA 9262, Section 8",
+    "RA 9262, Section 33",
+    "IRR, Rule IV, Section 11",
+    "IRR, Rule IV, Section 13",
+    "IRR, Rule IV, Section 27"
+   ],
+   "mrr": 0.0,
+   "recall@3": 0.0,
+   "precision@3": 0.0,
+   "ndcg@3": 0.0,
+   "recall@5": 0.0,
+   "precision@5": 0.0,
+   "ndcg@5": 0.0,
+   "recall@20": 0.0,
+   "precision@20": 0.0,
+   "ndcg@20": 0.0
+  }
+ ],
+ "answers": null,
+ "answer_records": null
+}
