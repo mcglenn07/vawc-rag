@@ -8,22 +8,22 @@
  },
  "questions": {
   "total": 52,
-  "verified": 0
+  "verified": 52
  },
  "retrieval": {
   "n": 45,
-  "mrr": 0.8499470899470899,
+  "mrr": 0.8610582010582011,
   "recall@3": 0.9111111111111111,
   "precision@3": 0.39259259259259255,
-  "ndcg@3": 0.8603810092867354,
+  "ndcg@3": 0.8671937558730185,
   "hits@3": 41,
   "recall@5": 0.9333333333333333,
   "precision@5": 0.24000000000000002,
-  "ndcg@5": 0.8689777383363921,
+  "ndcg@5": 0.8757904849226749,
   "hits@5": 42,
   "recall@20": 0.9666666666666667,
   "precision@20": 0.06222222222222223,
-  "ndcg@20": 0.879872700063309,
+  "ndcg@20": 0.8866854466495919,
   "hits@20": 43,
   "both_found": 12,
   "both_n": 13,
@@ -41,7 +41,7 @@
    "both": {
     "n": 13,
     "hits@5": 12,
-    "mrr": 0.8901098901098901
+    "mrr": 0.9285714285714286
    },
    "follow_up": {
     "n": 5,
@@ -778,29 +778,29 @@
    "both_found": true
   },
   {
-   "question": "Are protection orders issued under this law valid and enforceable throughout the Philippines?",
+   "question": "Are temporary and permanent protection orders issued under this law enforceable throughout the Philippines?",
    "type": "both",
    "expected": [
     "RA 9262, Section 12",
     "IRR, Rule IV, Section 22"
    ],
    "top5": [
-    "RA 9262, Section 8",
-    "RA 9262, Section 12",
     "IRR, Rule IV, Section 22",
-    "IRR, Rule IV, Section 11",
-    "RA 9262, Section 16"
+    "RA 9262, Section 12",
+    "RA 9262, Section 16",
+    "RA 9262, Section 15",
+    "RA 9262, Section 8"
    ],
-   "mrr": 0.5,
+   "mrr": 1.0,
    "recall@3": 1.0,
    "precision@3": 0.6666666666666666,
-   "ndcg@3": 0.6934264036172708,
+   "ndcg@3": 1.0,
    "recall@5": 1.0,
    "precision@5": 0.4,
-   "ndcg@5": 0.6934264036172708,
+   "ndcg@5": 1.0,
    "recall@20": 1.0,
    "precision@20": 0.1,
-   "ndcg@20": 0.6934264036172708,
+   "ndcg@20": 1.0,
    "both_found": true
   },
   {
@@ -1177,10 +1177,10 @@
    ],
    "top5": [
     "RA 9262, Section 15",
-    "IRR, Rule IV, Section 17",
-    "IRR, Rule IV, Section 18",
-    "RA 9262, Section 16",
-    "IRR, Rule IV, Section 22"
+    "IRR, Rule IV, Section 11",
+    "RA 9262, Section 8",
+    "IRR, Rule IV, Section 22",
+    "IRR, Rule IV, Section 17"
    ],
    "mrr": 1.0,
    "recall@3": 1.0,
@@ -1247,12 +1247,12 @@
   "chat_model": "gpt-4.1-mini",
   "n": 45,
   "accuracy": 4.844444444444444,
-  "completeness": 4.844444444444444,
-  "relevance": 4.866666666666666,
+  "completeness": 4.8,
+  "relevance": 4.933333333333334,
   "refused_not_in_docs": 7,
   "not_in_docs_n": 7,
   "false_refusals": 1,
-  "clean_citations": 51,
+  "clean_citations": 52,
   "answers_n": 52
  },
  "answer_records": [
@@ -1281,13 +1281,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, fully covers the reference points, and is directly relevant to the question."
+    "feedback": "The answer is fully accurate, complete, and directly relevant, providing correct details from both the law and its implementing rules."
    }
   },
   {
    "question": "How should this law be interpreted when it comes to protecting victims of violence against women and their children?",
    "type": "law_only",
-   "answer": "The law should be liberally construed to promote the protection and safety of victims of violence against women and their children [RA 9262, Section 4]. Similarly, the Implementing Rules and Regulations (IRR) state that the rules shall be liberally construed to promote the protection and safety of victims of violence against women and their children, and all doubts in implementation and interpretation shall be resolved in favor of women and their children consistent with the spirit and letter of the law [IRR, Rule I, Section 4].",
+   "answer": "The law should be liberally construed to promote the protection and safety of victims of violence against women and their children [RA 9262, Section 4]. Similarly, the Implementing Rules and Regulations (IRR) emphasize that the rules shall be liberally construed to promote the protection and safety of victims of violence against women and their children, resolving all doubts in favor of women and their children consistent with the spirit and letter of the law [IRR, Rule I, Section 4].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1295,7 +1295,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, complete, and directly relevant, even providing additional correct detail from the IRR."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with relevant legal citations."
    }
   },
   {
@@ -1309,13 +1309,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, complete, and directly addresses the question with appropriate legal citations."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question with appropriate legal references."
    }
   },
   {
    "question": "Where should I file an application for a protection order under this law?",
    "type": "law_only",
-   "answer": "You may file an application for a Temporary Protection Order (TPO) or Permanent Protection Order (PPO) in the Family Court. If there is no Family Court in your place of residence, you may file it in the Regional Trial Court, Metropolitan Trial Court, Municipal Trial Court, Municipal Trial Court in Cities, or Municipal Circuit Trial Court that has territorial jurisdiction over your place of residence. Your place of residence may include where you temporarily reside or where you sought refuge to escape continuing violence from the respondent [RA 9262, Section 10; IRR, Rule IV, Section 21].\n\nFor a Barangay Protection Order (BPO), you may file the application in the barangay where you are located or reside. If you and the respondent live in different municipalities or cities, the barangay officials where you reside shall assist you in filing an application for a protection order from the court within two hours from your request. The place of residence for this purpose may also include where you temporarily reside or sought refuge [IRR, Rule IV, Section 15; IRR, Rule IV, Section 21].",
+   "answer": "You may file an application for a Barangay Protection Order (BPO) in the barangay where the victim-survivor or petitioner is located or resides. If the parties live in different municipalities or cities, the barangay officials where the victim-survivor resides shall assist in filing the application for a protection order from the court within two hours [IRR, Rule IV, Section 15].\n\nFor Temporary Protection Orders (TPO) or Permanent Protection Orders (PPO), the application may be filed in the Family Court. If there is no Family Court, it may be filed in the Regional Trial Court, Metropolitan Trial Court, Municipal Trial Court, Municipal Trial Court in Cities, or Municipal Circuit Trial Court in the place of residence of the petitioner. The place of residence includes where the victim-survivor temporarily resides or sought refuge to escape violence [RA 9262, Section 10; IRR, Rule IV, Section 21].\n\nIf a Family Court exists in the place of residence of the petitioner, the application must be filed there [RA 9262, Section 10].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1323,7 +1323,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses where to file for each type of protection order under RA 9262, with correct legal references."
+    "feedback": "The answer is accurate, complete, and directly addresses where to file for each type of protection order under RA 9262, matching and expanding on the reference."
    }
   },
   {
@@ -1337,13 +1337,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, covers all required points from the reference, and is directly relevant to the question."
+    "feedback": "The answer is accurate, complete, and directly addresses the required information and steps for applying for a protection order under RA 9262 and its IRR."
    }
   },
   {
    "question": "What happens if a woman or her child applying for a protection order cannot afford to hire a lawyer?",
    "type": "law_only",
-   "answer": "If a woman or her child applying for a protection order cannot afford to hire a lawyer, the court shall immediately direct the Public Attorney\u2019s Office (PAO) to represent the petitioner in the hearing on the application upon the request of the applicant for appointment of counsel due to lack of economic means [RA 9262, Section 13]. The PAO will also consider lack of access to family or conjugal resources controlled by the perpetrator as qualifying for legal representation by the PAO [RA 9262, Section 13]. Additionally, a private counsel offering free legal service is not barred from representing the petitioner [RA 9262, Section 13].",
+   "answer": "If a woman or her child applying for a protection order cannot afford to hire a lawyer, the court shall immediately direct the Public Attorney\u2019s Office (PAO) to represent the petitioner in the hearing on the application upon the request of the applicant and a showing of lack of economic means to hire a counsel de parte. The lack of access to family or conjugal resources controlled by the perpetrator also qualifies the petitioner for PAO representation. If the PAO determines that the applicant can afford to hire a private counsel, it shall facilitate such legal representation. Additionally, a private counsel offering free legal service is not barred from representing the petitioner [RA 9262, Section 13].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1351,7 +1351,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with all key points from the reference."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with all key details from the reference."
    }
   },
   {
@@ -1379,27 +1379,27 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, complete, and directly addresses the question with correct references to both the law and its IRR."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question with relevant legal citations."
    }
   },
   {
    "question": "What happens if someone violates a Barangay Protection Order (BPO) issued under this law?",
    "type": "law_only",
-   "answer": "If someone violates a Barangay Protection Order (BPO) issued under RA 9262, the following applies:\n\n- A complaint for violation of the BPO must be filed directly with any municipal trial court, metropolitan trial court, or municipal circuit trial court that has territorial jurisdiction over the barangay that issued the BPO [RA 9262, Section 21].\n\n- Violation of a BPO is punishable by imprisonment of thirty (30) days, without prejudice to any other criminal or civil action that the offended party may file for any of the acts committed [RA 9262, Section 21].\n\n- The complaint for violation of a BPO is initiated by the Punong Barangay or Barangay Kagawad who issued the BPO. If they are no longer in office or incapacitated, any barangay official may file the complaint. If these officials refuse to file, the victim-survivor/applicant has the right to file the complaint [IRR, Rule IV, Section 16].\n\n- A judgment of violation of a BPO may be appealed according to the Rules of Court. During trial and upon judgment, the trial court may motu proprio issue a protection order as it deems necessary without need of an application [RA 9262, Section 21; IRR, Rule IV, Section 16].\n\n- Violation of any provision of a Temporary Protection Order (TPO) or Permanent Protection Order (PPO) issued under the Act constitutes contempt of court punishable under Rule 71 of the Rules of Court, without prejudice to other criminal or civil actions [RA 9262, Section 21; IRR, Rule IV, Section 23].\n\n- The protection order must have a notice in bold-faced or capital letters stating: \u201cViolation of this order is punishable by law\u201d [RA 9262, Section 17].\n\nIn summary, violating a BPO can lead to 30 days imprisonment and other legal actions, with complaints filed in the appropriate trial courts, and courts may issue further protection orders as needed [RA 9262, Section 21; IRR, Rule IV, Section 16].",
+   "answer": "Violation of a Barangay Protection Order (BPO) issued under RA 9262 is punishable by imprisonment of thirty (30) days, without prejudice to any other criminal or civil action that the offended party may file for any of the acts committed [RA 9262, Section 21]. \n\nA complaint for violation of a BPO must be filed directly with any municipal trial court, metropolitan trial court, or municipal circuit trial court that has territorial jurisdiction over the barangay that issued the BPO [RA 9262, Section 21]. The complaint is usually initiated by the Punong Barangay or Barangay Kagawad who issued the BPO, but if they refuse, the victim-survivor/applicant may file the complaint [IRR, Rule IV, Section 16].\n\nAdditionally, a judgment of violation of a BPO may be appealed according to the Rules of Court, and during trial or upon judgment, the trial court may motu proprio issue a protection order as it deems necessary without need of an application [RA 9262, Section 21; IRR, Rule IV, Section 16].\n\nThe protection order must also contain a notice in bold-faced type or capital letters stating: \u201cViolation of this order is punishable by law\u201d [RA 9262, Section 17].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
    "judge": {
     "accuracy": 5,
     "completeness": 5,
-    "relevance": 4,
-    "feedback": "The answer is accurate and complete, but includes some extra details not strictly required by the reference."
+    "relevance": 5,
+    "feedback": "The answer is accurate, complete, and directly addresses the consequences of violating a BPO under RA 9262, including procedural details and relevant legal provisions."
    }
   },
   {
    "question": "What are barangay officials and law enforcers required to do when someone asks for help due to violence covered by this law?",
    "type": "law_only",
-   "answer": "Barangay officials and law enforcers must respond immediately to a call for help or request for assistance or protection of the victim by entering the dwelling if necessary, whether or not a protection order has been issued, and ensure the safety of the victim/s [RA 9262, Section 30]. They must also confiscate any deadly weapon in the possession of the perpetrator or within plain view [RA 9262, Section 30]. They are required to transport or escort the victim/s to a safe place of their choice or to a clinic or hospital [RA 9262, Section 30]. They should assist the victim in removing personal belongings from the house [RA 9262, Section 30]. They must assist other government officers and employees who respond to the call for help [RA 9262, Section 30]. They are to ensure enforcement of Protection Orders issued by the Punong Barangay or courts [RA 9262, Section 30]. They must arrest the suspected perpetrator even without a warrant when any act of violence is occurring or has just been committed and there is imminent danger to the life or limb of the victim [RA 9262, Section 30]. Finally, they must immediately report the call for assessment or assistance to the DSWD, Social Welfare Department of LGUs, or accredited NGOs [RA 9262, Section 30].\n\nThe IRR adds that barangay officials shall verify the information, interview the victim and witnesses, document the interview, ensure confidentiality, and assist the victim in securing medico-legal reports [IRR, Rule VIII, Section 47]. They shall also advise the perpetrator to temporarily leave the house if not immediately arrested, assist in transferring the victim to a shelter or safe place, report the incident to the Local Social Welfare and Development Office and the Women and Children\u2019s Protection Desk within four hours, and monitor compliance with protection orders [IRR, Rule VIII, Section 47]. They must not influence the victim to abandon claims and must call the respondent for counseling if the relief involves failure to provide support [IRR, Rule VIII, Section 47]. Failure to report is punishable by fine or other liabilities [IRR, Rule VIII, Section 47].",
+   "answer": "Barangay officials and law enforcers must respond immediately to a call for help or request for assistance or protection of the victim by entering the dwelling if necessary, whether or not a protection order has been issued, and ensure the safety of the victim/s [RA 9262, Section 30]. They must also confiscate any deadly weapon in the possession of the perpetrator or within plain view [RA 9262, Section 30]. They are required to transport or escort the victim/s to a safe place of their choice or to a clinic or hospital [RA 9262, Section 30]. They should assist the victim in removing personal belongings from the house [RA 9262, Section 30] and assist other government officers and employees who respond to the call for help [RA 9262, Section 30]. They must ensure enforcement of Protection Orders issued by the Punong Barangay or courts [RA 9262, Section 30]. They are authorized to arrest the suspected perpetrator even without a warrant when any act of violence is occurring or has just been committed and there is imminent danger to the life or limb of the victim [RA 9262, Section 30]. Finally, they must immediately report the call for assessment or assistance to the DSWD, Social Welfare Department of LGUs, or accredited NGOs [RA 9262, Section 30].\n\nThe IRR adds that barangay officials shall verify the information, interview the victim-survivor and witnesses, document the interview, maintain confidentiality, and assist the victim-survivor in securing medico-legal reports [IRR, Rule VIII, Section 47]. They shall also advise the perpetrator to temporarily leave the house if not immediately arrested, assist in transferring the victim-survivor to a safe place, report the incident to the Local Social Welfare and Development Office and the Women and Children\u2019s Protection Desk within four hours, and monitor compliance with protection orders [IRR, Rule VIII, Section 47]. They must not attempt to influence the victim-survivor to abandon claims, and if the relief involves failure to provide support, they shall counsel the respondent on legal obligations without the victim-survivor present [IRR, Rule VIII, Section 47].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1407,7 +1407,7 @@
     "accuracy": 5,
     "completeness": 4,
     "relevance": 5,
-    "feedback": "The answer is highly accurate and relevant, but it omits some IRR-specific duties such as documentation, confidentiality, and timely reporting to certain agencies."
+    "feedback": "The answer is highly accurate and relevant, but it omits some IRR-specific duties such as confidentiality, documentation, and timely reporting to certain agencies."
    }
   },
   {
@@ -1421,13 +1421,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with all key rights clearly listed."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question with all key rights clearly listed."
    }
   },
   {
    "question": "Which government agencies are part of the council responsible for addressing violence against women and their children?",
    "type": "law_only",
-   "answer": "The government agencies that are part of the Inter-Agency Council on Violence Against Women and Their Children (IAC-VAWC) are:\n\n- Department of Social Welfare and Development (DSWD)\n- National Commission on the Role of Filipino Women (NCRFW)\n- Civil Service Commission (CSC)\n- Commission on Human Rights (CHR)\n- Council for the Welfare of Children (CWC)\n- Department of Justice (DOJ)\n- Department of the Interior and Local Government (DILG)\n- Philippine National Police (PNP)\n- Department of Health (DOH)\n- Department of Education (DepEd)\n- Department of Labor and Employment (DOLE)\n- National Bureau of Investigation (NBI) [RA 9262, Section 39]\n\nThe IRR confirms the same composition with the following officials as members:\n- Chairperson, Commission on Human Rights (CHR)\n- Chairperson, Civil Service Commission (CSC)\n- Executive Director, Council for the Welfare of Children (CWC)\n- Secretary, Department of Education (DepEd)\n- Secretary, Department of Interior and Local Government (DILG)\n- Secretary, Department of Health (DOH)\n- Secretary, Department of Justice (DOJ)\n- Secretary, Department of Labor and Employment (DOLE)\n- Secretary, Department of Social Welfare and Development (DSWD)\n- Chairperson, National Commission on the Role of Filipino Women (NCRFW)\n- Director, National Bureau of Investigation (NBI)\n- Director-General, Philippine National Police (PNP) [IRR, Rule IX, Section 53]",
+   "answer": "The government agencies that are part of the Inter-Agency Council on Violence Against Women and Their Children (IAC-VAWC) are:\n\n- Department of Social Welfare and Development (DSWD)\n- National Commission on the Role of Filipino Women (NCRFW)\n- Civil Service Commission (CSC)\n- Commission on Human Rights (CHR)\n- Council for the Welfare of Children (CWC)\n- Department of Justice (DOJ)\n- Department of the Interior and Local Government (DILG)\n- Philippine National Police (PNP)\n- Department of Health (DOH)\n- Department of Education (DepEd)\n- Department of Labor and Employment (DOLE)\n- National Bureau of Investigation (NBI) [RA 9262, Section 39]\n\nThe IRR lists the same agencies as members of the Council, specifying the positions of their representatives, such as Chairpersons, Secretaries, Executive Directors, or Directors-General of these agencies [IRR, Rule IX, Section 53].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1435,27 +1435,27 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, complete, and directly relevant, listing all agencies as in the reference and providing additional correct detail from the IRR."
+    "feedback": "The answer accurately lists all agencies in the reference and adds relevant detail from the IRR without unnecessary information."
    }
   },
   {
    "question": "Can a victim covered by this law take additional paid leave from work, and what happens if their employer prevents them from doing so?",
    "type": "law_only",
-   "answer": "Yes, a victim covered by RA 9262 is entitled to take a paid leave of absence of up to ten (10) days in addition to other paid leaves under the Labor Code and Civil Service Rules and Regulations. This leave is extendible when the necessity arises as specified in the protection order [RA 9262, Section 43]. \n\nIf the employer prejudices the victim's right to this leave, the employer shall be penalized according to the Labor Code and Civil Service Rules and Regulations. Similarly, an employer who prejudices any person for assisting a co-employee who is a victim under this Act shall also be liable for discrimination [RA 9262, Section 43].\n\nThe Implementing Rules and Regulations clarify that the ten-day paid leave can be availed at any time during the application of any protection order, investigation, prosecution, and/or trial of the criminal case. The leave covers days needed to attend to medical and legal concerns. The employer must comply upon presentation of a certification from the Punong Barangay/kagawad, prosecutor, or Clerk of Court that such action is pending. For government employees, an application for leave citing RA 9262 is also required. Denial of this leave or prejudice against the victim or those assisting them will result in liability for discrimination and violation of RA 9262, with penalties governed by the Labor Code and Civil Service Rules and Regulations [IRR, Rule VI, Section 42].",
+   "answer": "Yes, a victim covered by RA 9262 is entitled to take a paid leave of absence of up to ten (10) days in addition to other paid leaves under the Labor Code and Civil Service Rules and Regulations. This leave is extendible when the necessity arises as specified in the protection order [RA 9262, Section 43]. \n\nIf the employer prejudices the victim's right to this leave, the employer shall be penalized according to the Labor Code and Civil Service Rules and Regulations. Also, an employer who prejudices any person for assisting a co-employee who is a victim under this Act shall be liable for discrimination [RA 9262, Section 43].\n\nThe Implementing Rules and Regulations clarify that the ten-day paid leave can be availed at any time during the application of any protection order, investigation, prosecution, or trial of the criminal case. The leave covers days needed to attend to medical and legal concerns. The employer must comply upon presentation of a certification from the Punong Barangay/kagawad, prosecutor, or Clerk of Court that such action is pending. For government employees, an application for leave citing RA 9262 is also required. Denial of this leave or prejudice against the victim or those assisting them is considered discrimination and violation of RA 9262, with penalties governed by the Labor Code and Civil Service Rules [IRR, Rule VI, Section 42].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
    "judge": {
     "accuracy": 5,
-    "completeness": 5,
+    "completeness": 4,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, covers all points in the reference, and is directly relevant to the question."
+    "feedback": "The answer is accurate and relevant, but it omits some procedural details from the IRR about how the leave is availed and the required certification."
    }
   },
   {
    "question": "What laws apply if something is not specifically covered by this Act?",
    "type": "law_only",
-   "answer": "If something is not specifically covered by Republic Act No. 9262, the Revised Penal Code and other applicable laws shall have suppletory application for purposes of this Act [RA 9262, Section 47].",
+   "answer": "If something is not specifically covered by RA 9262, the Revised Penal Code and other applicable laws shall have suppletory application [RA 9262, Section 47].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1463,7 +1463,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with appropriate legal reference."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with a relevant citation."
    }
   },
   {
@@ -1477,7 +1477,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with relevant details from the implementing rules."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with relevant details."
    }
   },
   {
@@ -1491,13 +1491,13 @@
     "accuracy": 4,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer correctly identifies DSWD's responsibility and the irrelevance of a protection order, but incorrectly cites RA 7610 instead of RA 9262."
+    "feedback": "The answer correctly identifies DSWD as responsible and notes custody is regardless of a protection order, but incorrectly cites RA 7610 instead of RA 9262."
    }
   },
   {
    "question": "Are people allowed to reveal the identity or location of service providers involved in VAWC cases?",
    "type": "irr_only",
-   "answer": "No, the identity and location of service providers involved in VAWC cases shall not be disclosed by any person who has knowledge of the cases [IRR, Rule VII, Section 44].",
+   "answer": "No, people are not allowed to reveal the identity or location of service providers involved in VAWC cases. The privacy, identity, and locations of service providers, including NGOs and POs, shall not be disclosed by any person who has knowledge of the VAWC cases [IRR, Rule VII, Section 44].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1505,7 +1505,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with a relevant legal citation."
+    "feedback": "The answer is accurate, complete, and directly addresses the question using correct legal references."
    }
   },
   {
@@ -1519,13 +1519,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with appropriate reference to the law."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with a relevant citation."
    }
   },
   {
    "question": "What are barangay officials required to do when they receive information about violence against women and their children?",
    "type": "irr_only",
-   "answer": "When barangay officials receive information about violence against women and their children (VAWC), they are required to:\n\n1. Immediately verify the information and seek police assistance if necessary [IRR, Rule VIII, Section 47].\n2. Respond immediately to calls for help or requests for assistance or protection by entering the dwelling if needed, whether or not a protection order has been issued, and ensure the safety of the victim-survivors [IRR, Rule VIII, Section 47; RA 9262, Section 30].\n3. Interview the victim-survivors and witnesses to determine the facts, inform the victim-survivors of their rights and remedies, and document or record the testimonies with the victim-survivor's consent, keeping all records confidential [IRR, Rule VIII, Section 47].\n4. Arrest the perpetrator without a warrant if the violence is occurring, or if they have personal knowledge that abuse has just been committed and there is imminent danger to the victim-survivor's life or limb; confiscate any deadly weapon in possession or in plain view [IRR, Rule VIII, Section 47; RA 9262, Section 30].\n5. Transport or escort the victim-survivor to the nearest hospital or medical facility for treatment and medico-legal examination and assist in securing the medico-legal report [IRR, Rule VIII, Section 47; RA 9262, Section 30].\n6. If the perpetrator is not immediately arrested, advise or encourage the perpetrator to temporarily leave the house or go to counseling services [IRR, Rule VIII, Section 47].\n7. Assist the victim-survivors in taking personal belongings and children to a shelter or safe place if needed [IRR, Rule VIII, Section 47; RA 9262, Section 30].\n8. Report the incident and refer the victim-survivor to the Local Social Welfare and Development Office within four hours and also report to the Women and Children\u2019s Protection Desk at the nearest Police Station within the same period [IRR, Rule VIII, Section 47].\n9. Assist minor victim-survivors applying for Barangay Protection Orders by referring them to NGOs or social workers for counseling and support services [IRR, Rule VIII, Section 47].\n10. Monitor compliance of the respondent with the Barangay Protection Order and ensure safety and support to the victim-survivor and family during the 15-day period [IRR, Rule VIII, Section 47].\n11. Assist victim-survivors in filing complaints with the PNP Women and Children\u2019s Protection Desk or other law enforcement agencies and ensure all pertinent documents are forwarded [IRR, Rule VIII, Section 47].\n12. Keep a separate confidential logbook for VAWC complaints and cases, ensuring victim privacy [IRR, Rule VIII, Section 47].\n13. Not attempt to influence the victim-survivor to abandon claims; amicable settlements such as mediation or conciliation do not apply to VAWC cases [IRR, Rule VIII, Section 47].\n14. If the relief involves failure to provide support, call the respondent for counseling on legal obligations to support without the victim-survivor present; this is not conciliation or mediation [IRR, Rule VIII, Section 47].\n\nFailure to report incidents to the PNP may result in fines or other liabilities for barangay officials [IRR, Rule VIII, Section 47]. \n\nThese steps ensure immediate response, protection, documentation, and referral for victim-survivors of VAWC [IRR, Rule VIII, Section 47; RA 9262, Section 30].",
+   "answer": "When barangay officials receive information about violence against women and their children (VAWC), they are required to:\n\n1. Immediately verify the information and seek police assistance if necessary.\n2. Respond immediately to calls for help or requests for assistance or protection by entering the dwelling if needed, whether or not a protection order has been issued, and ensure the safety of the victim-survivors.\n3. Interview the victim-survivors and witnesses to determine the facts, inform the victim-survivors of their rights and remedies, and document or record the testimonies with the victim-survivor's consent, keeping all records confidential.\n4. Arrest the perpetrator without a warrant if the act of violence is occurring, or if they have personal knowledge that abuse has just been committed and there is imminent danger to the victim-survivor's life or limb; confiscate any deadly weapon in possession or plain view.\n5. Transport or escort the victim-survivor to the nearest hospital or medical facility for treatment and medico-legal examination and assist in securing the medico-legal report.\n6. If the perpetrator is not immediately arrested, advise or encourage the perpetrator to temporarily leave the house or seek counseling.\n7. Assist the victim-survivors in transferring to a shelter or safe place if necessary, including taking personal belongings and children.\n8. Report the incident and refer the victim-survivor to the Local Social Welfare and Development Office within four hours and also report to the Women and Children\u2019s Protection Desk at the nearest Police Station within the same period.\n9. Assist minor victim-survivors applying for Barangay Protection Orders by referring them to NGOs or social workers for counseling and support.\n10. Monitor compliance of the respondent with the Barangay Protection Order.\n11. Ensure safety and continued support to the victim-survivor and family during the 15-day period of the protection order.\n12. Assist the victim-survivors in filing complaints with the police or other law enforcement agencies.\n13. Forward all pertinent documents to the police Women and Children\u2019s Protection Desk.\n14. Maintain a separate confidential logbook for VAWC complaints and cases.\n15. Not attempt to influence the victim-survivor to abandon claims; amicable settlements like mediation or arbitration do not apply to VAWC cases.\n16. If the relief involves failure to provide support, call the respondent for counseling on legal obligations to support without the victim-survivor present.\n\nFailure to report incidents to the police may result in fines or other liabilities for the barangay official [IRR, Rule VIII, Section 47]. These duties are consistent with the Act's requirement that barangay officials respond immediately to calls for help, ensure victim safety, arrest perpetrators without warrant under certain conditions, and report incidents promptly [RA 9262, Section 30].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1533,7 +1533,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is highly accurate, comprehensive, and directly addresses the question with detailed steps from the law and IRR."
+    "feedback": "The answer is highly accurate, comprehensive, and directly addresses the required duties of barangay officials under RA 9262 and its IRR."
    }
   },
   {
@@ -1561,13 +1561,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, complete, and directly addresses the question with correct detail."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question without unnecessary information."
    }
   },
   {
    "question": "Can members of the Council or their permanent representatives receive honoraria or emoluments?",
    "type": "irr_only",
-   "answer": "Yes, the members of the Council or their designated permanent representatives shall receive honoraria or emoluments as may be determined by the Council in accordance with existing budget, accounting and auditing rules and regulations [IRR, Rule IX, Section 57]. This is consistent with the provision in the Act that the representatives shall receive emoluments as may be determined by the Council in accordance with existing budget and accounting rules and regulations [RA 9262, Section 39].",
+   "answer": "Yes. Members of the Council or their designated permanent representatives shall receive honoraria or emoluments as may be determined by the Council in accordance with existing budget, accounting and auditing rules and regulations [IRR, Rule IX, Section 57]. This is consistent with the provision in the Act that their representatives shall receive emoluments as may be determined by the Council in accordance with existing budget and accounting rules and regulations [RA 9262, Section 39].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1575,13 +1575,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with appropriate references."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question with appropriate references."
    }
   },
   {
    "question": "What are some of the responsibilities of the Secretariat to the Council?",
    "type": "irr_only",
-   "answer": "The Secretariat to the Council has the following responsibilities:\n- Coordinate and monitor, under the direction of the Council, the implementation of the policies and guidelines promulgated by the Council;\n- Assist in establishing, maintaining and managing a central database on VAWC, wherever feasible;\n- Provide technical, secretariat and records keeping and other services to the Council; and\n- Perform such other functions as may be directed by the Council [IRR, Rule IX, Section 58].",
+   "answer": "The Secretariat to the Council has the following responsibilities:\n- Coordinate and monitor, under the direction of the Council, the implementation of the policies and guidelines promulgated by the Council;\n- Assist in establishing, maintaining and managing a central database on violence against women and their children (VAWC), wherever feasible;\n- Provide technical, secretariat, records keeping, and other services to the Council; and\n- Perform other functions as may be directed by the Council [IRR, Rule IX, Section 58].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1589,13 +1589,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer accurately, completely, and concisely lists the Secretariat's responsibilities as stated in the reference."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with relevant details from the reference."
    }
   },
   {
    "question": "Will there be mechanisms to help implement the law and its rules at local and sub-national levels?",
    "type": "irr_only",
-   "answer": "Yes. The Council is tasked to establish mechanisms, as far as practicable, to ensure the implementation of the law and its rules and regulations at the sub-national and local levels [IRR, Rule IX, Section 59].",
+   "answer": "Yes. The Council shall, as far as practicable, establish mechanisms to ensure the implementation of the law and its rules and regulations at the sub-national and local levels [IRR, Rule IX, Section 59].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1603,13 +1603,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question using language consistent with the reference."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with a relevant citation."
    }
   },
   {
    "question": "What roles can NGOs play in helping to implement the law against violence against women and their children?",
    "type": "irr_only",
-   "answer": "NGOs working on violence against women and their children (VAWC) can help implement the law by:\n\n- Formulating and implementing policies and programs to eliminate VAWC;\n- Conducting capacity-building activities for government personnel and sharing their experiences in handling VAWC cases;\n- Coordinating with concerned agencies, local government units (LGUs), and other NGOs in reporting alleged perpetrators, rescuing victim-survivors, and conducting investigations if necessary;\n- Documenting VAWC cases;\n- Disseminating related policies and guidelines to eliminate VAWC to their networks locally and internationally; and\n- Providing services to VAWC victim-survivors and their families.\n\nAdditionally, NGO-government partnerships and joint projects are encouraged to promote these objectives effectively [IRR, Rule IX, Section 60].",
+   "answer": "NGOs working on violence against women and their children (VAWC) can participate in the implementation of the law in various ways, including:\n\n- Formulating and implementing policies and programs to eliminate VAWC;\n- Conducting capacity-building activities for government personnel and sharing their experiences in handling VAWC cases;\n- Coordinating with concerned agencies, local government units (LGUs), and other NGOs in reporting alleged perpetrators, rescuing victim-survivors, and conducting investigations if necessary;\n- Documenting VAWC cases;\n- Disseminating related policies and guidelines to eliminate VAWC to their networks locally and internationally; and\n- Providing services to VAWC victim-survivors and their families.\n\nTo ensure effective participation, NGO-government partnerships and joint projects are encouraged to promote these objectives [IRR, Rule IX, Section 60].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1623,7 +1623,7 @@
   {
    "question": "What kind of assistance can the Department of Health provide to women and children who are victims of violence?",
    "type": "irr_only",
-   "answer": "The Department of Health (DOH) shall provide medical assistance to victims of violence against women and their children [RA 9262, Section 40]. Specifically, through the Women and Children Protection Unit (WCPU) in DOH-retained hospitals or in coordination with LGUs or other government health facilities, the following health programs and services shall be immediately provided through a socialized scheme:\n\na) Complete physical and mental examinations;\nb) Medical/surgical treatment;\nc) Psychological and psychiatric evaluation and treatment;\nd) Hospital confinement when necessary;\ne) Referral to specialty hospitals and other concerned agencies as needed;\nf) Management of reproductive health concerns of victim-survivors; and\ng) If necessary, contact the DSWD or social worker of the LGU for emergency assistance to the woman and her child/children, or the police women and children concerns protection desk officer [IRR, Rule VI, Section 40].",
+   "answer": "The Department of Health (DOH) shall provide medical assistance to victims of violence against women and their children [RA 9262, Section 40]. Specifically, through the Women and Children Protection Unit (WCPU) in DOH-retained hospitals or in coordination with local government units (LGUs) or other government health facilities, the following health programs and services shall be immediately provided on a socialized scheme:\n\na) Complete physical and mental examinations;\nb) Medical and surgical treatment;\nc) Psychological and psychiatric evaluation and treatment;\nd) Hospital confinement when necessary;\ne) Referral to specialty hospitals and other concerned agencies as needed;\nf) Management of reproductive health concerns of victim-survivors; and\ng) If necessary, contacting the Department of Social Welfare and Development (DSWD) or social workers of the LGU for emergency assistance, or the police women and children concerns protection desk officer [IRR, Rule VI, Section 40].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1631,13 +1631,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, comprehensive, and directly addresses the question with detailed and relevant information from both RA 9262 and its IRR."
+    "feedback": "The answer is accurate, comprehensive, and directly addresses the question with relevant details from both RA 9262 and its IRR."
    }
   },
   {
    "question": "What actions are considered as violence against women and their children under the law?",
    "type": "both",
-   "answer": "Violence against women and their children under the law includes the following acts:\n\n(a) Causing physical harm to the woman or her child;\n(b) Threatening to cause the woman or her child physical harm;\n(c) Attempting to cause the woman or her child physical harm;\n(d) Placing the woman or her child in fear of imminent physical harm;\n(e) Attempting to compel or compelling the woman or her child to engage in conduct which they have the right to desist from, or to desist from conduct which they have the right to engage in, or attempting to restrict their freedom of movement or conduct by force, threat of force, physical or other harm, or intimidation. This includes threatening or depriving custody or access to family, depriving financial support, depriving legal rights, preventing engagement in legitimate activities, or controlling money or properties;\n(f) Inflicting or threatening to inflict physical harm on oneself to control the woman's actions or decisions;\n(g) Causing or attempting to cause the woman or her child to engage in any sexual activity which does not constitute rape, by force, threat, physical harm, or intimidation;\n(h) Engaging in conduct that alarms or causes substantial emotional or psychological distress, including stalking, peering or lingering outside residence, entering property against will, destroying property or harming pets, and harassment or violence;\n(i) Causing mental or emotional anguish, public ridicule or humiliation, including repeated verbal and emotional abuse, and denial of financial support or custody or access to children [RA 9262, Section 5]; [IRR, Rule III, Section 7].\n\nThese acts encompass physical, sexual, psychological, and economic abuse as defined in the law [RA 9262, Section 3]; [IRR, Rule II, Section 5].",
+   "answer": "Violence against women and their children under the law includes any of the following acts:\n\n(a) Causing physical harm to the woman or her child;\n(b) Threatening to cause physical harm to the woman or her child;\n(c) Attempting to cause physical harm to the woman or her child;\n(d) Placing the woman or her child in fear of imminent physical harm;\n(e) Attempting to compel or compelling the woman or her child to engage in or desist from conduct they have the right to engage in or desist from, or restricting their freedom of movement or conduct by force, threat, or intimidation. This includes threatening or depriving custody or access to family, depriving financial support, depriving legal rights, preventing engagement in legitimate professions or controlling money or properties;\n(f) Inflicting or threatening to inflict physical harm on oneself to control the woman's actions or decisions;\n(g) Causing or attempting to cause the woman or her child to engage in any sexual activity which does not constitute rape, by force, threat, physical harm, or intimidation;\n(h) Engaging in conduct that alarms or causes substantial emotional or psychological distress, including stalking, peering or lingering outside residence, entering property against will, destroying property or harming pets, and harassment or violence;\n(i) Causing mental or emotional anguish, public ridicule or humiliation, including repeated verbal and emotional abuse, and denial of financial support or custody or access to children [RA 9262, Section 5]; [IRR, Rule III, Section 7]. \n\nThese acts encompass physical, sexual, psychological, and economic abuse as defined in the law [RA 9262, Section 3]; [IRR, Rule II, Section 5].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1645,13 +1645,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, comprehensive, and directly addresses the question with detailed references to the law and implementing rules."
+    "feedback": "The answer accurately, completely, and concisely lists the acts considered violence under RA 9262, closely following the reference."
    }
   },
   {
    "question": "What penalties can someone face if found guilty of violence against women and their children under this law?",
    "type": "both",
-   "answer": "Under RA 9262, the penalties for violence against women and their children depend on the specific acts committed as defined in Section 5 of the Act:\n\n- Acts causing attempted, frustrated, or consummated parricide, murder, or homicide are punished according to the Revised Penal Code. If these acts result in mutilation, they are also punished under the Revised Penal Code. Serious physical injuries carry the penalty of prision mayor; less serious physical injuries are punished by prision correccional; slight physical injuries are punished by arresto mayor.\n- Acts that are threats or attempts related to the above are punished by imprisonment two degrees lower than the consummated crime but not lower than arresto mayor.\n- Acts under Section 5(c) and 5(d) are punished by arresto mayor.\n- Acts under Section 5(e) are punished by prision correccional.\n- Acts under Section 5(f) are punished by arresto mayor.\n- Acts under Section 5(g) are punished by prision mayor.\n- Acts under Section 5(h) and 5(i) are punished by prision mayor.\n- If the acts are committed while the woman or child is pregnant or in the presence of her child, the maximum penalty prescribed applies.\n- In addition to imprisonment, the perpetrator must pay a fine between 100,000 and 300,000 pesos and undergo mandatory psychological counseling or psychiatric treatment, reporting compliance to the court [RA 9262, Section 6].\n\nThe Implementing Rules and Regulations (IRR) provide similar penalties with the same structure and fines, specifying imprisonment ranges for prision mayor, prision correccional, and arresto mayor, and reiterate the mandatory counseling and fine [IRR, Rule III, Section 7; IRR, Rule III, Section 8].",
+   "answer": "Under RA 9262, the penalties for violence against women and their children depend on the specific acts committed as defined in Section 5 of the Act:\n\n- Acts causing attempted, frustrated, or consummated parricide, murder, or homicide are punished according to the Revised Penal Code. If these acts result in mutilation, the Revised Penal Code applies; serious physical injuries carry prision mayor; less serious physical injuries carry prision correccional; slight physical injuries carry arresto mayor. Acts that are attempts or threats are punished two degrees lower but not less than arresto mayor.\n- Acts under Section 5(c) and 5(d) are punished by arresto mayor.\n- Acts under Section 5(e) are punished by prision correccional.\n- Acts under Section 5(f) are punished by arresto mayor.\n- Acts under Section 5(g) are punished by prision mayor.\n- Acts under Section 5(h) and 5(i) are punished by prision mayor.\n- If the acts are committed while the woman or child is pregnant or in the presence of her child, the maximum penalty applies.\n- In addition to imprisonment, the perpetrator must pay a fine between 100,000 to 300,000 pesos and undergo mandatory psychological counseling or psychiatric treatment, reporting compliance to the court [RA 9262, Section 6].\n\nThe Implementing Rules and Regulations (IRR) provide similar penalties with the same structure and fines, specifying imprisonment ranges for prision mayor, prision correccional, and arresto mayor [IRR, Rule III, Section 7; IRR, Rule III, Section 8].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1665,7 +1665,7 @@
   {
    "question": "Who is allowed to file a petition for a protection order in cases of violence against women and their children?",
    "type": "both",
-   "answer": "A petition for protection order may be filed by any of the following:\n\n(a) the offended party;\n(b) parents or guardians of the offended party;\n(c) ascendants, descendants or collateral relatives within the fourth civil degree of consanguinity or affinity;\n(d) officers or social workers of the DSWD or social workers of local government units (LGUs);\n(e) police officers, preferably those in charge of women and children\u2019s desks;\n(f) Punong Barangay or Barangay Kagawad;\n(g) lawyer, counselor, therapist or healthcare provider of the petitioner;\n(h) at least two (2) concerned responsible citizens of the city or municipality where the violence against women and their children occurred and who has personal knowledge of the offense committed [RA 9262, Section 9]; this is confirmed by the IRR which lists the same categories [IRR, Rule IV, Section 12].",
+   "answer": "A petition for protection order may be filed by any of the following:\n(a) the offended party;\n(b) parents or guardians of the offended party;\n(c) ascendants, descendants or collateral relatives within the fourth civil degree of consanguinity or affinity;\n(d) officers or social workers of the DSWD or social workers of local government units (LGUs);\n(e) police officers, preferably those in charge of women and children\u2019s desks;\n(f) Punong Barangay or Barangay Kagawad;\n(g) lawyer, counselor, therapist or healthcare provider of the petitioner; and\n(h) at least two (2) concerned responsible citizens of the city or municipality where the violence against women and their children occurred and who has personal knowledge of the offense committed [RA 9262, Section 9]; [IRR, Rule IV, Section 12].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1673,13 +1673,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, complete, and directly addresses the question with all relevant details."
+    "feedback": "The answer is fully accurate, complete, and directly relevant, closely matching the reference answer with no contradictions or unnecessary information."
    }
   },
   {
-   "question": "Are protection orders issued under this law valid and enforceable throughout the Philippines?",
+   "question": "Are temporary and permanent protection orders issued under this law enforceable throughout the Philippines?",
    "type": "both",
-   "answer": "Yes. All Temporary Protection Orders (TPOs) and Permanent Protection Orders (PPOs) issued under RA 9262 are enforceable anywhere in the Philippines. Violation of these orders is punishable by a fine ranging from Five Thousand Pesos (P5,000.00) to Fifty Thousand Pesos (P50,000.00) and/or imprisonment of six (6) months [RA 9262, Section 12]; [IRR, Rule IV, Section 22].",
+   "answer": "Yes. Both Temporary Protection Orders (TPOs) and Permanent Protection Orders (PPOs) issued under RA 9262 are enforceable anywhere in the Philippines. Violation of these orders is punishable by a fine ranging from Five Thousand Pesos (P5,000.00) to Fifty Thousand Pesos (P50,000.00) and/or imprisonment of six (6) months [RA 9262, Section 12]; [IRR, Rule IV, Section 22].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1687,13 +1687,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, complete, and directly addresses the question with all relevant details from the reference."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question with all key details from the reference."
    }
   },
   {
    "question": "How long does a Temporary Protection Order last and what happens after it is issued?",
    "type": "both",
-   "answer": "A Temporary Protection Order (TPO) lasts for thirty (30) days from the date of its issuance by the court after an ex parte determination that such order should be issued [RA 9262, Section 15]. After the TPO is issued, the court schedules a hearing on the issuance of a Permanent Protection Order (PPO) prior to or on the date of the expiration of the TPO [RA 9262, Section 15]. The court orders the immediate personal service of the TPO on the respondent by the court sheriff, who may obtain assistance from law enforcement agents for the service [RA 9262, Section 15].\n\nThe TPO includes notice of the date of the hearing on the merits of the issuance of a PPO [RA 9262, Section 15].\n\nThe Implementing Rules and Regulations (IRR) confirm these details, stating that the TPO is effective for thirty (30) days, the court schedules a hearing on the PPO before or on the TPO's expiration, and the court sheriff must immediately serve the TPO on the respondent, possibly with law enforcement assistance [IRR, Rule IV, Section 17].",
+   "answer": "A Temporary Protection Order (TPO) lasts for thirty (30) days from the date of its issuance by the court after an ex parte determination that such order should be issued [RA 9262, Section 15]. After the TPO is issued, the court schedules a hearing on the issuance of a Permanent Protection Order (PPO) prior to or on the date of the expiration of the TPO [RA 9262, Section 15]. The court orders the immediate personal service of the TPO on the respondent by the court sheriff, who may obtain assistance from law enforcement agents for the service [RA 9262, Section 15]. The TPO includes notice of the date of the hearing on the merits of the issuance of a PPO [RA 9262, Section 15].\n\nThe Implementing Rules and Regulations (IRR) confirm that the TPO is effective for thirty (30) days and that the court schedules a hearing on the PPO before or on the TPO's expiration date. The IRR also states that the court sheriff, with possible law enforcement assistance, must immediately serve the TPO on the respondent, including notice of the PPO hearing date [IRR, Rule IV, Section 17].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1701,13 +1701,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, complete, and directly addresses the question with correct legal citations and relevant procedural details."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question with detailed references to both RA 9262 and its IRR."
    }
   },
   {
    "question": "What happens if the respondent does not show up or does not have a lawyer during the hearing for a Permanent Protection Order?",
    "type": "both",
-   "answer": "If the respondent does not show up despite proper notice, the court shall allow the applicant to present evidence ex parte and render judgment based on that evidence. The court will also allow the introduction of any history of abusive conduct of the respondent, even if it was not directed against the applicant or the person for whom the application is made. If the respondent appears without a lawyer on the hearing date, the court shall appoint a lawyer for the respondent and immediately proceed with the hearing. The respondent's non-appearance or lack of a lawyer is not a ground for rescheduling or postponing the hearing on the merits of the issuance of a Permanent Protection Order (PPO) [RA 9262, Section 16]; [IRR, Rule IV, Section 18].",
+   "answer": "If the respondent does not show up despite proper notice, the court shall allow the applicant to present evidence ex parte and render judgment based on that evidence. The court will also allow the introduction of any history of abusive conduct by the respondent, even if it was not directed against the applicant or the person for whom the application is made. If the respondent appears without a lawyer on the hearing date, the court shall appoint a lawyer for the respondent and immediately proceed with the hearing. The respondent's non-appearance or lack of a lawyer is not a ground for rescheduling or postponing the hearing on the merits of the issuance of a Permanent Protection Order (PPO) [RA 9262, Section 16]; [IRR, Rule IV, Section 18].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1715,7 +1715,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with relevant legal details and citations."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with relevant details and appropriate legal citations."
    }
   },
   {
@@ -1729,13 +1729,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the required statement and formatting."
+    "feedback": "The answer is accurate, complete, and directly addresses the required statement and formatting as specified in the reference."
    }
   },
   {
    "question": "What happens if an official or judge does not act on an application for a protection order within the required time without a valid reason?",
    "type": "both",
-   "answer": "If an official or judge fails to act on an application for a protection order within the required period without justifiable cause, they shall be administratively liable [RA 9262, Section 18]. The same is stated in the Implementing Rules and Regulations [IRR, Rule IV, Section 30].",
+   "answer": "If an official or judge fails to act on an application for a protection order within the required period without justifiable cause, they shall be administratively liable [RA 9262, Section 18]. The same rule is reiterated in the Implementing Rules and Regulations [IRR, Rule IV, Section 30].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1743,13 +1743,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with appropriate references."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question with relevant legal citations."
    }
   },
   {
    "question": "What happens if a person ordered by the court to give a bond to keep the peace under a protection order fails to do so?",
    "type": "both",
-   "answer": "If a person ordered by the court to give a bond to keep the peace under a protection order fails to do so, the person shall be detained. The detention period shall not exceed six (6) months if the person has been prosecuted for acts punishable under Section 5(a) to 5(f) of the Act, and shall not exceed thirty (30) days if for acts punishable under Section 5(g) to 5(i) of the Act [RA 9262, Section 23]. The same is stated in the IRR, with the gender-neutral pronouns he/she used [IRR, Rule IV, Section 26].",
+   "answer": "If a person ordered by the court to give a bond to keep the peace under a protection order fails to do so, the court shall detain the person. The detention period shall not exceed six (6) months if the person has been prosecuted for acts punishable under Section 5(a) to 5(f) of the Act, and shall not exceed thirty (30) days if for acts punishable under Section 5(g) to 5(i) of the Act [RA 9262, Section 23]. The same rule is stated in the IRR, with the court requiring the person to present two sufficient sureties who undertake that the person will not commit the violence sought to be prevented, and detention periods as above if the bond is not given [IRR, Rule IV, Section 26].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1757,7 +1757,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with correct details from both the law and its IRR."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question with correct legal details and references."
    }
   },
   {
@@ -1771,13 +1771,13 @@
     "accuracy": 2,
     "completeness": 2,
     "relevance": 4,
-    "feedback": "The answer incorrectly claims there is no prescriptive period specified, missing the clear time limits in the reference, but it stays on topic."
+    "feedback": "The answer incorrectly claims there is no prescriptive period specified, missing the clear time limits in the reference."
    }
   },
   {
    "question": "Can a woman suffering from battered woman syndrome be held criminally or civilly liable if she commits a crime?",
    "type": "both",
-   "answer": "A woman suffering from battered woman syndrome who commits a crime does not incur any criminal or civil liability, even if the elements for justifying circumstances of self-defense under the Revised Penal Code are absent. The courts must be assisted by expert psychiatrists or psychologists in determining her state of mind at the time of the crime [RA 9262, Section 26; IRR, Rule V, Section 32].",
+   "answer": "No, a woman suffering from battered woman syndrome who is found by the courts to be in that state at the time of the commission of the crime does not incur any criminal or civil liability, even if the elements for justifying circumstances of self-defense under the Revised Penal Code are absent. The courts shall be assisted by expert psychiatrists or psychologists in determining her state of mind at that time [RA 9262, Section 26; IRR, Rule V, Section 32].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1785,13 +1785,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is fully accurate, complete, and relevant, even providing additional correct legal detail."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with relevant legal details."
    }
   },
   {
    "question": "Who gets custody of children if a woman is a victim of violence?",
    "type": "both",
-   "answer": "The woman victim of violence is entitled to the custody and support of her child or children. Children below seven years old or older but with mental or physical disabilities shall automatically be given to the mother, with the right to support, unless the court finds compelling reasons to order otherwise. A victim who is suffering from battered woman syndrome shall not be disqualified from having custody of her children. In no case shall custody of minor children be given to the perpetrator of violence against a woman who is suffering from battered woman syndrome [RA 9262, Section 28]; [IRR, Rule V, Section 34].",
+   "answer": "The woman victim of violence is entitled to the custody and support of her child or children. Children below seven (7) years old or older but with mental or physical disabilities shall automatically be given to the mother, with the right to support, unless the court finds compelling reasons to order otherwise. A victim who is suffering from battered woman syndrome shall not be disqualified from having custody of her children. In no case shall custody of minor children be given to the perpetrator of violence against a woman who is suffering from battered woman syndrome [RA 9262, Section 28]. The Implementing Rules and Regulations (IRR) reiterate the same provisions [IRR, Rule V, Section 34].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1799,7 +1799,7 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question using correct legal references."
+    "feedback": "The answer is fully accurate, complete, and directly addresses the question with appropriate legal references."
    }
   },
   {
@@ -1819,10 +1819,10 @@
   {
    "question": "What is the penalty for estafa?",
    "type": "not_in_docs",
-   "answer": "I cannot find this in RA 9262 or the IRR. The sources cover penalties for violence against women and their children, but do not mention estafa.",
+   "answer": "The sources do not specifically mention estafa or its penalty under RA 9262 or its IRR. The penalties listed in RA 9262 and the IRR correspond to acts defined in Sections 5 and 7 of the Act and Rules, respectively, but estafa is not included among them [RA 9262, Section 6]; [IRR, Rule III, Section 8].\n\nI cannot find this in RA 9262 or the IRR. The sources cover penalties for violence against women and their children as defined in the Act.",
    "refused": true,
    "unretrieved_citations": [],
-   "cited": false
+   "cited": true
   },
   {
    "question": "What are the grounds for annulment of marriage?",
@@ -1851,7 +1851,7 @@
   {
    "question": "How do I register a business name in the Philippines?",
    "type": "not_in_docs",
-   "answer": "I cannot find this in RA 9262 or the IRR. These sources cover protection orders and related procedures for violence against women and their children, not business registration.",
+   "answer": "I cannot find this in RA 9262 or the IRR. These sources cover protection orders and related procedures for violence against women and children, not business registration.",
    "refused": true,
    "unretrieved_citations": [],
    "cited": false
@@ -1859,7 +1859,7 @@
   {
    "question": "What is the minimum wage in Metro Manila?",
    "type": "not_in_docs",
-   "answer": "I cannot find this in RA 9262 or the IRR. The sources cover violence against women and their children, protection orders, penalties, and leave entitlements, but do not mention minimum wage.",
+   "answer": "I cannot find this in RA 9262 or the IRR. The sources cover protection orders, penalties, and leave benefits related to violence against women and their children, but do not mention minimum wage.",
    "refused": true,
    "unretrieved_citations": [],
    "cited": false
@@ -1867,7 +1867,7 @@
   {
    "question": "Can a foreigner own land in the Philippines?",
    "type": "not_in_docs",
-   "answer": "I cannot find this in RA 9262 or the IRR. These sources cover violence against women and their children, protection orders, and related procedures, but do not address land ownership or property laws.",
+   "answer": "I cannot find this in RA 9262 or the IRR. These sources cover violence against women and children, protection orders, and related procedures, but do not address land ownership or property laws.",
    "refused": true,
    "unretrieved_citations": [],
    "cited": false
@@ -1875,35 +1875,35 @@
   {
    "question": "How long does it last?",
    "type": "follow_up",
-   "answer": "A Barangay Protection Order (BPO) is a protection order issued by the Punong Barangay or an available Barangay Kagawad ordering the perpetrator to desist from committing acts of violence against a woman or her child as specified in the Act. It aims to prevent further acts of violence and grant necessary reliefs such as prohibiting the respondent from threatening, committing physical harm, or harassing the victim-survivor [RA 9262, Section 14]; [IRR, Rule IV, Section 13].\n\nA BPO is effective for fifteen (15) days from the date of issuance [RA 9262, Section 14]; [IRR, Rule IV, Section 14].",
+   "answer": "A Barangay Protection Order (BPO) is a protection order issued by the Punong Barangay or an available Barangay Kagawad ordering the perpetrator to desist from committing acts of violence against a woman or her child, specifically acts causing physical harm or threats of physical harm, and prohibiting harassment or communication with the victim-survivor [RA 9262, Section 14]; [IRR, Rule IV, Section 11; IRR, Rule IV, Section 13].\n\nA BPO is effective for fifteen (15) days from the date of issuance [RA 9262, Section 14]; [IRR, Rule IV, Section 14].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
    "judge": {
     "accuracy": 5,
     "completeness": 5,
-    "relevance": 4,
-    "feedback": "The answer is accurate and complete, but includes extra background information not strictly needed for the duration question."
+    "relevance": 5,
+    "feedback": "The answer is accurate, complete, and directly addresses the duration of a BPO as stated in the reference."
    }
   },
   {
    "question": "What is the penalty for it?",
    "type": "follow_up",
-   "answer": "Yes, stalking is a crime under RA 9262. It is included under acts of violence against women and their children as specified in Section 5 of the Act [RA 9262, Section 6].\n\nThe penalty for stalking, which falls under Section 5(e) of the Act, is prision correccional [RA 9262, Section 6]. This means imprisonment ranging from six months and one day to six years according to the Revised Penal Code classification [IRR, Rule III, Section 8].",
+   "answer": "Yes, stalking is a crime under RA 9262. It is included as one of the acts of violence against women and their children under Section 5(h) of the Act [RA 9262, Section 6].\n\nThe penalty for stalking under RA 9262 is prision mayor, which means imprisonment ranging from six years and one day to twelve years [RA 9262, Section 6]. The Implementing Rules and Regulations confirm this penalty [IRR, Rule III, Section 8].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
    "judge": {
-    "accuracy": 5,
-    "completeness": 5,
+    "accuracy": 4,
+    "completeness": 3,
     "relevance": 5,
-    "feedback": "The answer correctly identifies the penalty for stalking under RA 9262, matching the reference's focus on specific sections and penalties."
+    "feedback": "The answer correctly states the imprisonment penalty but omits the required fine and mandatory counseling, making it accurate but incomplete."
    }
   },
   {
    "question": "How long is it effective?",
    "type": "follow_up",
-   "answer": "A Temporary Protection Order (TPO) is a protection order issued by the court on the date of filing of the application after an ex parte determination that such order should be issued. It may grant any, some, or all of the reliefs mentioned in the Act to prevent further acts of violence against a woman or her child [RA 9262, Section 15]; [IRR, Rule IV, Section 17].\n\nThe TPO is effective for thirty (30) days [RA 9262, Section 15]; [IRR, Rule IV, Section 17].",
+   "answer": "A Temporary Protection Order (TPO) is a protection order issued by the court on the date of filing of the application after an ex parte determination that such order should be issued [RA 9262, Section 15]. It may grant any, some, or all of the reliefs mentioned in the Act [RA 9262, Section 15].\n\nA TPO is effective for thirty (30) days [RA 9262, Section 15].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1911,13 +1911,13 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with correct references."
+    "feedback": "The answer is accurate, complete, and directly addresses the question with correct details."
    }
   },
   {
    "question": "Where do they file it?",
    "type": "follow_up",
-   "answer": "A petition for a protection order may be filed by any of the following: the offended party; parents or guardians of the offended party; ascendants, descendants or collateral relatives within the fourth civil degree of consanguinity or affinity; officers or social workers of the DSWD or social workers of local government units (LGUs); police officers, preferably those in charge of women and children\u2019s desks; Punong Barangay or Barangay Kagawad; lawyer, counselor, therapist or healthcare provider of the petitioner; and at least two concerned responsible citizens of the city or municipality where the violence against women and their children occurred who have personal knowledge of the offense committed [RA 9262, Section 9; IRR, Rule IV, Section 12].\n\nThe petition for a Temporary Protection Order (TPO) or Permanent Protection Order (PPO) may be filed in the Family Court or, if there is none, in the Regional Trial Court, Metropolitan Trial Court, Municipal Trial Court, Municipal Trial Court in Cities, or Municipal Circuit Trial Court in the place of residence of the petitioner. The place of residence of the victim-survivor may include where she temporarily resides or where she sought refuge to escape continuing violence from the respondent [RA 9262, Section 10; IRR, Rule IV, Section 21].\n\nApplications for Barangay Protection Orders (BPOs) shall follow the rules on venue under Section 409 of the Local Government Code and may be filed in the barangay where the victim-survivor or petitioner is located or resides. If the parties reside in different municipalities or cities, the barangay officials where the victim-survivor resides shall assist in filing the application for a protection order from the court within two hours from the request [IRR, Rule IV, Section 15].",
+   "answer": "A petition for a protection order may be filed by any of the following: the offended party; parents or guardians of the offended party; ascendants, descendants or collateral relatives within the fourth civil degree of consanguinity or affinity; officers or social workers of the DSWD or social workers of local government units (LGUs); police officers, preferably those in charge of women and children\u2019s desks; Punong Barangay or Barangay Kagawad; lawyer, counselor, therapist or healthcare provider of the petitioner; and at least two concerned responsible citizens of the city or municipality where the violence against women and their children occurred who have personal knowledge of the offense committed [RA 9262, Section 9; IRR, Rule IV, Section 12].\n\nThe petition for a Temporary Protection Order (TPO) or Permanent Protection Order (PPO) may be filed in the Family Court or, if there is none, in the Regional Trial Court, Metropolitan Trial Court, Municipal Trial Court, Municipal Trial Court in Cities, or Municipal Circuit Trial Court in the place of residence of the petitioner. The place of residence of the victim-survivor may include the place where she temporarily resides or where she sought refuge or sanctuary to escape from and avoid continuing violence from the respondent [RA 9262, Section 10; IRR, Rule IV, Section 21].\n\nApplications for Barangay Protection Orders (BPOs) shall follow the rules on venue under Section 409 of the Local Government Code of 1991 and its implementing rules and regulations. Hence, a BPO may be filed in the barangay where the victim-survivor or petitioner is located or resides. If the parties reside in different municipalities or cities, the Punong Barangay or any kagawad of the barangay where the victim-survivor resides shall assist the victim-survivor/applicant in filing an application for a Protection Order from the court within two hours from the request [IRR, Rule IV, Section 15].",
    "refused": false,
    "unretrieved_citations": [],
    "cited": true,
@@ -1925,24 +1925,21 @@
     "accuracy": 5,
     "completeness": 5,
     "relevance": 5,
-    "feedback": "The answer is accurate, complete, and directly addresses the question with relevant details and correct references."
+    "feedback": "The answer is accurate, complete, and directly addresses the question, providing all relevant details about where to file protection orders under RA 9262."
    }
   },
   {
    "question": "Can my ex-boyfriend be covered by this?",
    "type": "follow_up",
-   "answer": "A Barangay Protection Order (BPO) is a protection order issued by the Punong Barangay or a Barangay Kagawad ordering the perpetrator to desist from committing acts of violence such as physical harm or threats of physical harm against a woman or her child. It is issued ex parte on the date of filing after determining the basis of the application and is effective for fifteen (15) days. The BPO prohibits the respondent from threatening, committing acts of violence, or harassing, annoying, telephoning, contacting, or otherwise communicating with the victim-survivor directly or indirectly. The BPO is enforceable within the barangay that issued it and must be personally served to the respondent immediately after issuance [RA 9262, Section 14]; [IRR, Rule IV, Section 11; IRR, Rule IV, Section 13; IRR, Rule IV, Section 14].\n\nRegarding coverage of an ex-boyfriend, RA 9262 and its IRR define covered relationships primarily as those involving women and their children in domestic or intimate relationships, including spouses, former spouses, dating partners, or those who have a child in common. However, the sources provided do not explicitly define \"ex-boyfriend\" or clarify if an ex-boyfriend is covered under the Act or eligible for protection orders. Therefore, I cannot confirm from these sources whether your ex-boyfriend is covered by the BPO provisions.",
+   "answer": "A Barangay Protection Order (BPO) is a protection order issued by the Punong Barangay or a Barangay Kagawad ordering the perpetrator to desist from committing acts of violence against a woman or her child, specifically acts causing physical harm or threats of physical harm as defined under the Act and its Rules. It is issued ex parte on the date of filing after determination of the basis of the application and is effective for fifteen (15) days. The BPO prohibits the respondent from threatening or committing acts of violence and from harassing or communicating with the victim-survivor directly or indirectly. The BPO is enforced within the barangay that issued it and must be personally served to the respondent immediately after issuance [RA 9262, Section 14]; [IRR, Rule IV, Section 11; IRR, Rule IV, Section 13; IRR, Rule IV, Section 14].\n\nRegarding coverage, RA 9262 protects women and their children who are victims of violence committed by a person with whom the woman has or had a sexual or dating relationship, among other relationships defined in the Act. However, the exact relationships covered are defined in Section 3 of RA 9262, which is not included in the provided sources. Therefore, I cannot confirm from the given sources whether an ex-boyfriend is covered. The sources do not specify coverage for ex-boyfriends explicitly.",
    "refused": false,
-   "unretrieved_citations": [
-    "RA 9262, Section 5",
-    "IRR, Rule IV, Section 7 - definitions not included in the sources provided"
-   ],
+   "unretrieved_citations": [],
    "cited": true,
    "judge": {
-    "accuracy": 2,
-    "completeness": 2,
-    "relevance": 2,
-    "feedback": "The answer provides detailed information about Barangay Protection Orders but fails to accurately state that ex-boyfriends are covered under RA 9262 if there was a dating or sexual relationship, as specified in the reference."
+    "accuracy": 3,
+    "completeness": 3,
+    "relevance": 3,
+    "feedback": "The answer accurately describes BPOs and partially addresses coverage, but incorrectly claims the sources do not specify ex-boyfriends, missing that former dating/sexual relationships are covered under Sec. 3(e)."
    }
   }
  ]

@@ -8,22 +8,22 @@
  },
  "questions": {
   "total": 52,
-  "verified": 0
+  "verified": 52
  },
  "retrieval": {
   "n": 45,
-  "mrr": 0.8180246913580247,
-  "recall@3": 0.8444444444444444,
-  "precision@3": 0.3703703703703703,
-  "ndcg@3": 0.8069446677747235,
-  "hits@3": 38,
-  "recall@5": 0.9111111111111111,
-  "precision@5": 0.23555555555555557,
-  "ndcg@5": 0.8346825771831975,
-  "hits@5": 41,
+  "mrr": 0.838395061728395,
+  "recall@3": 0.8888888888888888,
+  "precision@3": 0.3851851851851852,
+  "ndcg@3": 0.8402780011080568,
+  "hits@3": 40,
+  "recall@5": 0.9333333333333333,
+  "precision@5": 0.24000000000000002,
+  "ndcg@5": 0.8584453203371221,
+  "hits@5": 42,
   "recall@20": 0.9555555555555556,
   "precision@20": 0.06111111111111111,
-  "ndcg@20": 0.8492878479114642,
+  "ndcg@20": 0.8651348757963216,
   "hits@20": 43,
   "both_found": 12,
   "both_n": 13,
@@ -45,8 +45,8 @@
    },
    "follow_up": {
     "n": 5,
-    "hits@5": 2,
-    "mrr": 0.14555555555555555
+    "hits@5": 3,
+    "mrr": 0.3288888888888889
    }
   }
  },
@@ -778,18 +778,18 @@
    "both_found": true
   },
   {
-   "question": "Are protection orders issued under this law valid and enforceable throughout the Philippines?",
+   "question": "Are temporary and permanent protection orders issued under this law enforceable throughout the Philippines?",
    "type": "both",
    "expected": [
     "RA 9262, Section 12",
     "IRR, Rule IV, Section 22"
    ],
    "top5": [
-    "RA 9262, Section 12",
     "IRR, Rule IV, Section 22",
+    "RA 9262, Section 12",
     "RA 9262, Section 8",
-    "RA 9262, Section 33",
-    "RA 9262, Section 22"
+    "RA 9262, Section 15",
+    "RA 9262, Section 16"
    ],
    "mrr": 1.0,
    "recall@3": 1.0,
@@ -1128,22 +1128,22 @@
     "RA 9262, Section 14"
    ],
    "top5": [
-    "RA 9262, Section 8",
-    "IRR, Rule IV, Section 11",
-    "IRR, Rule IV, Section 14",
-    "IRR, Rule IV, Section 13",
-    "IRR, Rule VIII, Section 47"
+    "RA 9262, Section 14",
+    "RA 9262, Section 21",
+    "RA 9262, Section 16",
+    "IRR, Rule IV, Section 16",
+    "RA 9262, Section 8"
    ],
-   "mrr": 0.16666666666666666,
-   "recall@3": 0.0,
-   "precision@3": 0.0,
-   "ndcg@3": 0.0,
-   "recall@5": 0.0,
-   "precision@5": 0.0,
-   "ndcg@5": 0.0,
+   "mrr": 1.0,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 1.0,
+   "recall@5": 1.0,
+   "precision@5": 0.2,
+   "ndcg@5": 1.0,
    "recall@20": 1.0,
    "precision@20": 0.05,
-   "ndcg@20": 0.3562071871080222
+   "ndcg@20": 1.0
   },
   {
    "question": "What is the penalty for it?",
@@ -1178,20 +1178,20 @@
    "top5": [
     "IRR, Rule IV, Section 24",
     "IRR, Rule IV, Section 18",
-    "IRR, Rule IV, Section 17",
     "RA 9262, Section 15",
-    "RA 9262, Section 8"
+    "RA 9262, Section 16",
+    "IRR, Rule IV, Section 17"
    ],
-   "mrr": 0.25,
-   "recall@3": 0.0,
-   "precision@3": 0.0,
-   "ndcg@3": 0.0,
+   "mrr": 0.3333333333333333,
+   "recall@3": 1.0,
+   "precision@3": 0.3333333333333333,
+   "ndcg@3": 0.5,
    "recall@5": 1.0,
    "precision@5": 0.2,
-   "ndcg@5": 0.43067655807339306,
+   "ndcg@5": 0.5,
    "recall@20": 1.0,
    "precision@20": 0.05,
-   "ndcg@20": 0.43067655807339306
+   "ndcg@20": 0.5
   },
   {
    "question": "Where do they file it?",

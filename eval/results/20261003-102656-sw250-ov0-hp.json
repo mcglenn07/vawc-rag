@@ -8,22 +8,22 @@
  },
  "questions": {
   "total": 52,
-  "verified": 0
+  "verified": 52
  },
  "retrieval": {
   "n": 45,
-  "mrr": 0.8689947089947091,
-  "recall@3": 0.9333333333333333,
-  "precision@3": 0.4,
-  "ndcg@3": 0.8794304346001217,
-  "hits@3": 42,
+  "mrr": 0.8623280423280423,
+  "recall@3": 0.9111111111111111,
+  "precision@3": 0.39259259259259255,
+  "ndcg@3": 0.8671937558730185,
+  "hits@3": 41,
   "recall@5": 0.9555555555555556,
   "precision@5": 0.24444444444444444,
-  "ndcg@5": 0.8880271636497781,
+  "ndcg@5": 0.8843872139723313,
   "hits@5": 43,
   "recall@20": 0.9666666666666667,
   "precision@20": 0.06222222222222223,
-  "ndcg@20": 0.8915147179692877,
+  "ndcg@20": 0.887874768291841,
   "hits@20": 43,
   "both_found": 12,
   "both_n": 13,
@@ -46,7 +46,7 @@
    "follow_up": {
     "n": 5,
     "hits@5": 4,
-    "mrr": 0.5666666666666667
+    "mrr": 0.5066666666666666
    }
   }
  },
@@ -778,29 +778,29 @@
    "both_found": true
   },
   {
-   "question": "Are protection orders issued under this law valid and enforceable throughout the Philippines?",
+   "question": "Are temporary and permanent protection orders issued under this law enforceable throughout the Philippines?",
    "type": "both",
    "expected": [
     "RA 9262, Section 12",
     "IRR, Rule IV, Section 22"
    ],
    "top5": [
-    "RA 9262, Section 12",
-    "RA 9262, Section 8",
     "IRR, Rule IV, Section 22",
-    "IRR, Rule IV, Section 11",
-    "RA 9262, Section 16"
+    "RA 9262, Section 12",
+    "RA 9262, Section 15",
+    "RA 9262, Section 16",
+    "RA 9262, Section 8"
    ],
    "mrr": 1.0,
    "recall@3": 1.0,
    "precision@3": 0.6666666666666666,
-   "ndcg@3": 0.9197207891481876,
+   "ndcg@3": 1.0,
    "recall@5": 1.0,
    "precision@5": 0.4,
-   "ndcg@5": 0.9197207891481876,
+   "ndcg@5": 1.0,
    "recall@20": 1.0,
    "precision@20": 0.1,
-   "ndcg@20": 0.9197207891481876,
+   "ndcg@20": 1.0,
    "both_found": true
   },
   {
@@ -1177,10 +1177,10 @@
    ],
    "top5": [
     "RA 9262, Section 15",
-    "IRR, Rule IV, Section 11",
     "IRR, Rule IV, Section 18",
     "IRR, Rule IV, Section 22",
-    "RA 9262, Section 8"
+    "IRR, Rule IV, Section 11",
+    "IRR, Rule IV, Section 24"
    ],
    "mrr": 1.0,
    "recall@3": 1.0,
@@ -1201,21 +1201,21 @@
    ],
    "top5": [
     "IRR, Rule IV, Section 21",
-    "RA 9262, Section 10",
-    "RA 9262, Section 7",
+    "RA 9262, Section 9",
     "IRR, Rule IV, Section 12",
-    "RA 9262, Section 9"
+    "RA 9262, Section 7",
+    "RA 9262, Section 10"
    ],
-   "mrr": 0.5,
-   "recall@3": 1.0,
-   "precision@3": 0.3333333333333333,
-   "ndcg@3": 0.6309297535714575,
+   "mrr": 0.2,
+   "recall@3": 0.0,
+   "precision@3": 0.0,
+   "ndcg@3": 0.0,
    "recall@5": 1.0,
    "precision@5": 0.2,
-   "ndcg@5": 0.6309297535714575,
+   "ndcg@5": 0.38685280723454163,
    "recall@20": 1.0,
    "precision@20": 0.05,
-   "ndcg@20": 0.6309297535714575
+   "ndcg@20": 0.38685280723454163
   },
   {
    "question": "Can my ex-boyfriend be covered by this?",
